@@ -1,0 +1,11 @@
+/**hys index.wxss**/
+.main-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.main-nickname {
+  color: #aaa;
+}

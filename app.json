@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/hys/index",
+    "pages/hys/login/login",
+    "pages/index/index",
+    "pages/hys/conferenceList/conferenceList",
+    "pages/hys/userInfo/userInfo",
+    "pages/common/error/error",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationBarTitleText": "会e室",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "list": [
+      {
+        "pagePath": "pages/hys/conferenceList/conferenceList",
+        "text": "会议室"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日程"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "预定"
+      },
+      {
+        "pagePath": "pages/hys/userInfo/userInfo",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+@import "../../common/lib/weui.wxss";
+form{
+  width: 100%;
+}

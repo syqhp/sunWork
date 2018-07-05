@@ -1,0 +1,19 @@
+<view class="personal-header">
+  <view class="personal-header-left">
+    <image src='http://chuantu.biz/t6/337/1530518084x-1404817748.png'></image>
+  </view>
+  <view class="personal-header-right">
+    <p>姓名：<em>曲终无过</em></p>
+    <p>邮箱：<em>928929878@qq.com</em></p>
+  </view>
+</view>
+<view class="personal-main">
+  <view class="personal-row clearfix">
+    <span class="personal-left">手机号</span>
+    <span class="personal-right">17682441227</span>
+  </view>
+  <view class="personal-row clearfix">
+    <span class="personal-left">会议室管理</span>
+    <span class="personal-right"><image src='{{rightImg}}'></image></span>
+  </view>
+</view>

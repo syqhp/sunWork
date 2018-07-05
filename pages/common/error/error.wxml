@@ -1,0 +1,3 @@
+<view class="container">
+  <text class="error-nickname">{{message}}</text>
+</view>
