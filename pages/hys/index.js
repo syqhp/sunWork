@@ -5,6 +5,8 @@ Page({
     welcomeIndexImage:"http://chuantu.biz/t6/337/1530516050x-1404817748.jpg",
     params:{
       code:'',
+      headUrl:'',
+      nickName:''
     }
   },
   onReady:function(){

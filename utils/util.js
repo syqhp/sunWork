@@ -11,6 +11,8 @@ function requestLoading(url, params, message, success, fail) {
   if (message != "") {
     wx.showLoading({
       title: message,
+      icon:'none',
+      mask:true,
     })
   }
   wx.request({
@@ -62,7 +64,8 @@ const showMessage = dataInfo => {
 const login = dataInfo =>{
   wx.showToast({
     title: '登陆超时',
-    mask: true
+    mask: true,
+    icon: 'loading',
   }),
     setTimeout(function () {
       wx.hideToast(),
@@ -84,6 +87,17 @@ const formatTime = date => {
   const second = date.getSeconds()
 
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
+/**
+ * 格式化时间(无时分秒)
+ */
+const formatDate = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  return [year, month, day].map(formatNumber).join('-')
 }
 
 /**
@@ -115,4 +129,5 @@ module.exports = {
   formatTime: formatTime,
   login:login,
   isBlank: isBlank,
+  formatDate: formatDate
 }

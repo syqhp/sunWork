@@ -10,7 +10,8 @@ Page({
       randomIds: '14281909272509',
       dateTime:'',
     },
-    dataList:[]
+    dataList:[],
+    dataTime:''
   },
 
   /**
@@ -21,9 +22,13 @@ Page({
     util.requestLoading('/rest/api/findScheduleByConference', this.data.params, '正在加载',
       function (res) {
         if (res.code == 200) {
-          that.data.dataList = res.dateList;
-          console.info(that.data.dataList);
+          
           //跳转不同页面
+          that.setData({
+            dataList: res.dateList,
+            dataTime: util.formatDate(new Date())
+          })
+          
           
         } else if (res.code == 400) {
           //弹窗提醒异常

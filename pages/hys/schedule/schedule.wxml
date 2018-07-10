@@ -1,10 +1,11 @@
 <view class='content'>
-  <view class='schedule-top' wx:for="{{dataList}}" wx:for-item="log">
-    <view class='schedule-col active' >
-      <view class='schedule-col-t active'>{{log.day}}</view>
-      <view class='schedule-col-b active'>{{log.week}}aa</view>
-    </view> 
-  </view>
+  <view class='schedule-top'>
+      <view class='schedule-col {{dataTime == item.time?"active":""}}' wx:for="{{dataList}}" wx:key="">
+        <view class='schedule-col-t {{dataTime == item.time?"active":""}}'>{{item.day}}</view>
+        <view class='schedule-col-b {{dataTime == item.time?"active":""}}'>{{item.week}}</view>
+      </view> 
+    </view>
+  
 
   <view class='schedule-bottom'>
     <view class='schedule-title'>

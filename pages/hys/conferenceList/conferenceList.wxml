@@ -11,6 +11,7 @@
       <view wx:for="{{followList}}" wx:key="">
         <text>{{item.name}}</text>
       </view>
+     
     </swiper-item>
     <swiper-item>
     <view wx:if="{{createList.length == 0}}" class="container">

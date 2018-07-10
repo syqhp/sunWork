@@ -50,7 +50,6 @@ Page({
     util.requestLoading('/rest/api/findConferenceList', this.data.params, '正在加载',
       function (res) {
         if (res.code == 200) {
-          console.info(res.data);
           //跳转不同页面
           if (that.data.params.type == 'follow') {
             that.setData({
