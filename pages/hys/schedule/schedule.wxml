@@ -1,0 +1,42 @@
+<view class='content'>
+  <view class='schedule-top' wx:for="{{dataList}}" wx:for-item="log">
+    <view class='schedule-col active' >
+      <view class='schedule-col-t active'>{{log.day}}</view>
+      <view class='schedule-col-b active'>{{log.week}}aa</view>
+    </view> 
+  </view>
+
+  <view class='schedule-bottom'>
+    <view class='schedule-title'>
+      <view class='schedule-title-l'>✚</view>
+      <view class='schedule-title-r'>会议室Demo</view>
+    </view>
+    <view class='schedule-main'>
+      <view class='schedule-row'>
+        <view class='schedule-left'>8:00</view>
+        <view class='schedule-right'>
+          <view class='schedule-right-r'></view>
+          <view class='line'></view>
+          <view class='schedule-right-r'></view>
+        </view>
+      </view>
+      <view class='schedule-row'>
+        <view class='schedule-left'>8:00</view>
+        <view class='schedule-right'>
+          <view class='schedule-right-r'></view>
+          <view class='line'></view>
+          <view class='schedule-right-r active'></view>
+        </view>
+      </view>
+      <view class='schedule-row'>
+        <view class='schedule-left'>8:00</view>
+        <view class='schedule-right'>
+          <view class='schedule-right-r'></view>
+          <view class='line'></view>
+          <view class='schedule-right-r active'></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='schedule-footer'>预定</view>
+</view>
