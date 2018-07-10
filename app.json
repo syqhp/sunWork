@@ -25,11 +25,11 @@
         "text": "会议室"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/hys/schedule/schedule",
         "text": "日程"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/hys/userInfo/userInfo",
         "text": "预定"
       },
       {

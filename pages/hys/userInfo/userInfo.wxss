@@ -1,8 +1,8 @@
 @import "../../common/lib/weui.wxss";
 .personal-header{
-  height: 4.5rem;    
+  height: 180rpx;    
   background: #fff;
-  margin-top: 0.4rem;
+  margin-top: 32rpx;
   border-top: 1px solid #e3e3e3;
   border-bottom: 1px solid #e3e3e3;
 }
