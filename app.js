@@ -30,6 +30,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    selectId:[] //以后注意定义！！注意注意！！
   }
 })

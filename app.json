@@ -1,13 +1,16 @@
 {
   "pages": [
+      "pages/hys/index",
+    "pages/hys/select/select",
     "pages/hys/schedule/schedule",
-    "pages/hys/index",
+  
     "pages/hys/login/login",
     "pages/index/index",
     "pages/hys/conferenceList/conferenceList",
     "pages/hys/userInfo/userInfo",
     "pages/common/error/error",
     "pages/logs/logs"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

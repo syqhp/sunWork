@@ -1,0 +1,27 @@
+<view class='select-hy'>
+  <view class='create-hy'>
+    <view class='create-hy-title'>我创建的</view>
+    <view class='create-hy-main'>
+      <checkbox-group class="group" bindchange="checkboxChange">
+        <view class="label-1" wx:for="{{createList}}" wx:key="">
+          <label>
+            <view class='create-left'>
+            <checkbox value="{{item.randomId}}" checked="{{item.fs}}" ></checkbox>
+            <!-- item.fs在js中赋给的变量，此变量没有特别必要去data中定义，因为他的父级list是接口返回的，里面的参数也没有特别定义 -->
+            </view>
+            <view class='create-right'>
+            <text class="label-1-text create-right-top">{{item.name}}</text>
+            <text class="label-1-text create-right-bom">{{item.remark}}</text>
+            </view>
+          </label>
+        </view>
+      </checkbox-group>
+      
+    </view>
+  </view>
+  <view class='select-footer-wrap'>
+   <view class='select-footer {{selectLength>0?"active":""}}' bindtap='goSchedule'>确定
+   {{selectLength>0?"(已选:"+selectLength+"个）":""}}
+   </view>
+  </view>
+</view>
