@@ -59,7 +59,7 @@ Page({
             that.setData({
               createList: res.data
             })
-            console.info(that.data.createList);
+            // console.info(that.data.createList);
           }
         } else if (res.code == 400) {
           //弹窗提醒异常
