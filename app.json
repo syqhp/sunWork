@@ -1,16 +1,23 @@
 {
   "pages": [
-      "pages/hys/index",
+    "pages/hys/index",
+    "pages/hys/revise/revise",
+    "pages/hys/hyReserveDetail/hyReserveDetail",
+    "pages/hys/hyDetail/hyDetail",
+    "pages/hys/reserve/reserve",
+    "pages/hys/wxCode/wxCode",
+    "pages/hys/createHy/createHy",
+    "pages/hys/reserveDetail/reserveDetail",
+    "pages/logs/logs",
     "pages/hys/select/select",
-    "pages/hys/schedule/schedule",
-  
+    "pages/hys/management/management",
+    "pages/hys/userInfo/userInfo",
     "pages/hys/login/login",
     "pages/index/index",
     "pages/hys/conferenceList/conferenceList",
-    "pages/hys/userInfo/userInfo",
     "pages/common/error/error",
-    "pages/logs/logs"
-
+    "pages/hys/schedule/schedule"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,7 +39,7 @@
         "text": "日程"
       },
       {
-        "pagePath": "pages/hys/userInfo/userInfo",
+        "pagePath": "pages/hys/reserve/reserve",
         "text": "预定"
       },
       {

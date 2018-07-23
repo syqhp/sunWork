@@ -8,49 +8,53 @@
 }
 .personal-header-left{
   float: left;    
-  margin: 0.5rem 0.8rem 0 0.8rem;
+  margin: 20rpx 32rpx 0 32rpx;
 }
 .personal-header-left>image{
-  width:3.5rem;
-  height:3.5rem;
+  width:140rpx;
+  height:140rpx;
   border-radius: 50%;
   display: block;
+  border: 2rpx solid #ddd;
 }
 .personal-header-right{
-  background: url("http://chuantu.biz/t6/337/1530515884x-1404817748.png") right no-repeat;    
-  padding-top: 0.7rem;    
-  background-size: 0.4rem;
-  margin-right: 0.8rem;
+  background: url("http://chuantu.biz/t6/337/1530515884x-1404817748.png") right top 76rpx no-repeat;     
+  background-size: 16rpx;
+  margin-right: 32rpx;
+  padding-top:40rpx;
+
 }
-.personal-header-right>p{
-  font-size: 0.7rem;    
-  height: 1.5rem;
-  line-height: 1.5rem;
+.personal-header-right>text{
+  font-size: 28rpx;    
   color: #b3a3a3;    
-  white-space: nowrap;
-  overflow: hidden;
+  display: block;
+}
+.personal-header-right>text:first-child{
+  padding-bottom:10rpx;
 }
 .personal-row{
-  font-size: 0.7rem;
+  font-size: 28rpx;
   color: #333;
   font-weight: 500;
   background: #fff;
-  height: 2.2rem;
-  line-height: 2.2rem;
-  margin-top: 0.4rem;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-top: 16rpx;
   border-top: 1px solid #e3e3e3;
   border-bottom: 1px solid #e3e3e3;
-  padding: 0 0.8rem;
+  padding: 0 32rpx;
 }
 .personal-left{
   float: left;
 }
 .personal-right{
-  color: #b3a3a3;
+  font-size: 28rpx;    
+  color: #999 !important;  
   float: right;
 }
 .personal-right>image{
-    width: 0.4rem;   
+    width: 16rpx;  
+    height: 30rpx; 
     vertical-align: middle;
 }
 

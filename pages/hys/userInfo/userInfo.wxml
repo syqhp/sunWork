@@ -13,10 +13,10 @@
       <view class="personal-left">手机号</view>
       <view class="personal-right">17682441227</view>
     </view>
-    <view class="personal-row clearfix">
-      <text class="personal-left">会议室管理</text>
+    <view class="personal-row clearfix" bindtap='goManagement'>
+      <text class="personal-left" >会议室管理</text>
       <view class="personal-right">
-        <!-- <image :src='{{rightImg}'></image> -->
+       <image src='http://chuantu.biz/t6/337/1530515884x-1404817748.png'></image>
       </view>
     </view>
   </view>

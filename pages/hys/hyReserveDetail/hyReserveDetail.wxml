@@ -1,0 +1,39 @@
+<view class='hy'>
+  <view class='hy-top'>
+    <view class='hy-top-bg'>
+      <image src='../../../image/bg.jpeg'></image>
+    </view>
+    <view class='hy-top-font'>
+      <text>慈宁宫</text>
+      <text>慈宁宫</text>
+    </view>
+  </view>
+</view>
+
+<view class='hy-main'>
+  <view class='hy-title'>2018年8月12日</view>
+  <view class='hy-row-wrap'>
+    <view class='hy-row'>
+      <view class='hy-left'>
+        <text>9:00</text>
+        <view class='line'>｜</view>
+        <text> 9:30</text>
+     </view>
+      <view class='hy-right'>
+        <view class='hy-right-t'>完美人生</view>
+        <view class='hy-right-b'>完美人生</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+  <view class='footer-nav'>
+    <view class='footer-nav-col'>
+      <image src='../../../image/footer-back.png'></image>
+    </view>
+    <view class='footer-nav-col3'>报名</view>
+    <view class='footer-nav-col2' bindtap='getMore'>更多</view>
+    <view class='footer-nav-col'>
+      <image src='../../../image/forwarding.png'></image>
+    </view>
+  </view>

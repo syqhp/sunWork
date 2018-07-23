@@ -1,0 +1,75 @@
+
+  <view class='hyDetail-title'>
+    <view class='hyDetail-title-l'>
+      <image src='../../../image/time.png'></image>
+    </view>
+    <view class='hyDetail-title-r'>
+      <view class='hyDetail-title-rt'>火焰山</view>
+      <view class='hyDetail-title-rb'>帅帅帅</view>
+    </view>
+  </view>
+
+<view class='detail-row-wrap'>
+    <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+          <view class="weui-cell__bd">会议室</view>
+          <view class="weui-cell__ft">火焰山</view>
+        </view>
+     <view class="weui-cell">
+          <view class="weui-cell__bd">会议时间</view>
+          <view class="weui-cell__ft ">2018-08-12 11:00 至 11:30</view>
+        </view>
+        </view>
+  </view>
+
+<view class='hyDetail-row-wrap'>
+  <view class='hyDetail-row'>
+    <view class='hyDetail-row-l'>会议室</view>
+    <view class='hyDetail-row-r'>
+      <view class='hyDetail-title'>
+        <view class='hyDetail-title-l'>
+          <image src='../../../image/icon.jpg'></image>
+        </view>
+        <view class='hyDetail-title-r'>
+          <view class='hyDetail-title-rt'>火焰山</view>
+          <view class='hyDetail-title-rb'>帅帅帅</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='hyDetail-row'>
+    <view class='hyDetail-row-l'>发起人</view>
+    <view class='hyDetail-row-r '>
+    <view class='hyDetail-bor'>
+      <view class='wx-icon'><image src='../../../image/icon.jpg'></image></view>
+      <text class='wx-name'>FlyFlyFlyFFly</text>
+    </view>
+    </view>
+  </view>
+
+   <view class='hyDetail-row'>
+    <view class='hyDetail-row-l'>参与人（1）</view>
+    <view class='hyDetail-row-r'>
+      <view class='hyDetail-bor'>
+        <view class='wx-icon'><image src='../../../image/icon.jpg'></image></view>
+        <text class='wx-name'>Fly</text>
+      </view>
+      <view class='hyDetail-bor'>
+        <view class='wx-icon'><image src='../../../image/icon.jpg'></image></view>
+        <text class='wx-name'>Fly</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+  <view class='footer-nav'>
+    <view class='footer-nav-col'>
+      <image src='../../../image/footer-back.png'></image>
+    </view>
+    <view class='footer-nav-col3'>报名</view>
+    <view class='footer-nav-col2' bindtap='getMore'>更多</view>
+    <view class='footer-nav-col'>
+      <image src='../../../image/forwarding.png'></image>
+    </view>
+  </view>

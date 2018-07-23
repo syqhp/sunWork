@@ -1,0 +1,56 @@
+@import "../../common/lib/weui.wxss";
+
+.detail-h{
+  height:2.58823529em;
+  line-height:2.58823529em;
+}
+.code{
+
+}
+.code-title{
+  color: #999;
+  font-size: 32rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.code-img{
+text-align: center;
+margin-bottom: 40rpx;
+}
+.code-img image:first-child{
+  width: 260rpx;
+  height: 260rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20rpx;
+} 
+.code-img image:last-child{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align:bottom;
+}
+.code-font{
+  font-size: 28rpx;
+  color: #b3a3a3;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.code-btn{
+  width: 480rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  background: #24C2B5;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  margin: 0 auto 20rpx auto;
+  opacity: 0.5;
+}
+.code-btn.active{
+    opacity: 1;
+}
+.code-btn.btn2{
+    margin-top: 30rpx;
+}

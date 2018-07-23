@@ -1,0 +1,27 @@
+<view class='content'>
+  <view class='schedule-top'>
+      <view class='schedule-col {{dataTime == item.time?"active":""}}' wx:for="{{dataList}}" wx:key="">
+        <view class='schedule-col-t {{dataTime == item.time?"active":""}}'>{{item.day}}</view>
+        <view class='schedule-col-b {{dataTime == item.time?"active":""}}'>{{item.week}}</view>
+      </view> 
+    </view>
+  
+
+  <view class='schedule-bottom'>
+    <view class='schedule-title'>
+      <view class='schedule-title-l' bindtap='goSelect'>✚</view>
+      <view class='schedule-title-r' wx:for="{{hysConferenceList}}" wx:key="">{{hysConferenceList[index].conferenceName}}</view>
+      <!--hysConferenceList[index].conferenceName为通过接口获取的会议室信息，不是通过全局变量获取的  -->
+    </view>
+    <view class='schedule-main' wx:for="{{hydata}}" wx:key="">
+      <view class='schedule-row' wx:for="{{hydata[index]}}" wx:key="">
+        <view class='schedule-left'>{{item.date}}</view>
+      
+        <view class='schedule-right'>
+          <view class='schedule-right-r'></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='schedule-footer {{reserveTime != ""?"active":""}}'>预定{{reserveTime}}</view>
+</view>

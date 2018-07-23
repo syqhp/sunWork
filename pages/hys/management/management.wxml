@@ -1,0 +1,126 @@
+<view class='date-title'>
+  <view class='date-title-col'>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+      <button type="default" plain="true" size='mini'>
+        {{date}}
+        </button>
+      </view>
+    </picker>
+  </view>
+  <view class='date-title-col'>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+      <button type="default" plain="true" size='mini'>
+        {{date}}
+        </button>
+      </view>
+    </picker>
+  </view>
+  <view class='date-title-col'>
+    <button type="primary" size="mini">查询</button>
+  </view>
+</view>
+<view class='date-main'>
+  <view class='date-row-wrap'>
+    <view class='date-row-top'>
+        <view class='date-row-topl'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>慈宁宫慈宁宫慈宁宫慈宁宫慈宁宫</text>
+        </view>
+        <text class='date-row-topr'>累计时间：10小时20分钟            </text>
+    </view>
+    <view class='date-row-bom'>
+        <view class='date-row-boml'>2018-07-09 <br/>16:00-16:30</view>
+        <view class='date-row-bomc'>
+          <text>会议室开会</text>
+          <text>会议室开会</text>
+        </view>
+        <view class='date-row-bomr'>
+          <view class='date-row-bomrt'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>Fly..</text>
+          </view>
+          <view class='date-row-bomrb'>15757157232</view>
+        </view>
+    </view>
+  </view>
+<view class='date-row-wrap'>
+    <view class='date-row-top'>
+        <view class='date-row-topl'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>慈宁宫慈宁宫慈宁宫慈宁宫慈宁宫</text>
+        </view>
+        <text class='date-row-topr'>累计时间：10小时20分钟            </text>
+    </view>
+    <view class='date-row-bom'>
+        <view class='date-row-boml'>2018-07-09 <br/>16:00-16:30</view>
+        <view class='date-row-bomc'>
+          <text>会议室开会</text>
+          <text>会议室开会</text>
+        </view>
+        <view class='date-row-bomr'>
+          <view class='date-row-bomrt'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>Fly..</text>
+          </view>
+          <view class='date-row-bomrb'>15757157232</view>
+        </view>
+    </view>
+  </view>
+  <view class='date-row-wrap'>
+    <view class='date-row-top'>
+        <view class='date-row-topl'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>慈宁宫慈宁宫慈宁宫慈宁宫慈宁宫</text>
+        </view>
+        <text class='date-row-topr'>累计时间：10小时20分钟            </text>
+    </view>
+    <view class='date-row-bom'>
+        <view class='date-row-boml'>2018-07-09 <br/>16:00-16:30</view>
+        <view class='date-row-bomc'>
+          <text>会议室开会</text>
+          <text>会议室开会</text>
+        </view>
+        <view class='date-row-bomr'>
+          <view class='date-row-bomrt'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>Fly..</text>
+          </view>
+          <view class='date-row-bomrb'>15757157232</view>
+        </view>
+    </view>
+  </view>
+  <view class='date-row-wrap'>
+    <view class='date-row-top'>
+        <view class='date-row-topl'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>慈宁宫慈宁宫慈宁宫慈宁宫慈宁宫</text>
+        </view>
+        <text class='date-row-topr'>累计时间：10小时20分钟            </text>
+    </view>
+    <view class='date-row-bom'>
+        <view class='date-row-boml'>2018-07-09 <br/>16:00-16:30</view>
+        <view class='date-row-bomc'>
+          <text>会议室开会</text>
+          <text>会议室开会</text>
+        </view>
+        <view class='date-row-bomr'>
+          <view class='date-row-bomrt'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>Fly..</text>
+          </view>
+          <view class='date-row-bomrb'>15757157232</view>
+        </view>
+    </view>
+  </view>
+  <view class='date-row-wrap'>
+    <view class='date-row-top'>
+        <view class='date-row-topl'>
+            <image src='../../../image/icon.jpg'></image>
+            <text>慈宁宫慈宁宫慈宁宫慈宁宫慈宁宫</text>
+        </view>
+        <text class='date-row-topr'>累计时间：10小时20分钟            </text>
+    </view>
+  </view>
+</view>

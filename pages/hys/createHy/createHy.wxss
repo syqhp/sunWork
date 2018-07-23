@@ -1,0 +1,32 @@
+@import "../../common/lib/weui.wxss";
+
+.detail-h{
+  height:2.58823529em;
+  line-height:2.58823529em;
+}
+.weui-cells:last-child{
+  margin-top: 20rpx;
+}
+.detail-font{
+margin-top:.77em;
+margin-bottom:.3em;
+padding-left:15px;
+padding-right:15px;
+color:#999999;
+font-size:14px;
+}
+
+.schedule-footer{
+  margin:20rpx;
+  background: #24C2B5;
+  color: #fff;
+  opacity: 0.5;
+  border-radius: 8rpx;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.schedule-footer.active{
+  opacity: 1;
+}

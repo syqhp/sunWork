@@ -13,6 +13,16 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     this.loadData();
   },
+  goDetail:function(){
+    wx.navigateTo({
+      url: '../hyReserveDetail/hyReserveDetail'
+    })
+  },
+  create:function(){
+    wx.navigateTo({
+      url: '../createHy/createHy'
+    })
+  },
   //滑动切换
   swiperTab: function (e) {
     var that = this;
@@ -55,11 +65,12 @@ Page({
             that.setData({
               followList: res.data
             })
+            console.info(that.data.followList);
           } else {
             that.setData({
               createList: res.data
             })
-            // console.info(that.data.createList);
+            console.info(that.data.createList);
           }
         } else if (res.code == 400) {
           //弹窗提醒异常

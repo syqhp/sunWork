@@ -1,0 +1,120 @@
+
+.date-title{
+  display: flex;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 25rpx 15rpx 5rpx 15rpx;
+}
+.date-title-col{
+  flex: 1;
+}
+.date-title-col:last-child button{
+  width: 100%;
+  background: #24C2B5;
+}
+
+.date-main{
+  padding-top: 104rpx;
+}
+.date-row-wrap{
+
+}
+.date-row-top{
+  display: flex;
+  padding: 40rpx 25rpx 20rpx 25rpx;
+}
+.date-row-topl{
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.date-row-topl image{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.date-row-topl text{
+  font-size: 28rpx;
+  color: #b3a3a3;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.date-row-topr{
+  font-size: 30rpx;
+  color: #999;
+  flex: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  padding-top: 4rpx;
+}
+
+.date-row-bom{
+  display: flex;
+  background: #fff;
+  padding: 20rpx 15rpx;
+}
+.date-row-boml{
+  font-size: 28rpx;
+  color: #b3a3a3;
+  flex: 1;
+  line-height:46rpx;
+
+}
+.date-row-bomc{
+  flex: 2;
+  line-height:49rpx;
+
+}
+.date-row-bomc text:first-child{
+  font-size: 30rpx;
+  color: #000;
+  display: block;
+}
+.date-row-bomc text:last-child{
+  font-size: 28rpx;
+  color: #999;
+  display: block;
+}
+.date-row-bomr{
+  flex: 1;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.date-row-bomrt image{
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.date-row-bomrt text{
+  color: #000;
+  font-size: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.date-row-bomrb{
+  color: #24C2B5;
+  font-size: 28rpx;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height:46rpx;
+}

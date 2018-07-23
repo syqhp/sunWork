@@ -1,4 +1,4 @@
-// pages/hys/schedule/schedule.js
+// pages/hys/hyDetail/hyDetail.js
 Page({
 
   /**
@@ -14,6 +14,36 @@ Page({
   onLoad: function (options) {
   
   },
+   getMore:function(e){
+     wx.showActionSheet({
+       itemList: ['邀请', '删除'],
+       success: function (res) {
+         console.log(res.tapIndex)
+         if (res.tapIndex == 1) {
+           wx.showModal({
+             cancelText: "取消",
+             confirmText: '确定',
+             title: '确定删除',
+             content: '您确认删除本次日程吗？',
+             success: function (res) {
+               if (res.confirm) {
+                 console.log('用户点击确定')
+               } else if (res.cancel) {
+                 console.log('用户点击取消')
+               }
+             }
+           })
+         }
+       },
+       fail: function (res) {
+           console.log(deleteId)
+         
+        
+       }
+     })
+   },
+
+      
 
   /**
    * 生命周期函数--监听页面初次渲染完成
