@@ -6,7 +6,8 @@ Page({
     followList:[],
     createList:[],
     params:{
-      type:'follow'
+      type:'follow',
+      formId: ''
     }
   },
   onLoad: function (options) {
@@ -44,6 +45,33 @@ Page({
         currentTab: e.target.dataset.current
       })
     }
+  },
+  testSubmit: function(e){
+    var that = this;
+    util.requestLoading('/rest/api/test', this.data.params, '正在加载',
+      function (res) {
+        if (res.code == 200) {
+          //跳转不同页面
+          
+        } else if (res.code == 400) {
+          //弹窗提醒异常
+          const dataInfo = { content: res.message };
+          util.showMessage(dataInfo);
+
+        } else if (res.code == 410) {
+          //跳页面提醒异常
+          wx.redirectTo({
+            url: '../../common/error/error?message=' + res.message
+          })
+        } else if (res.code == 420) {
+          //登陆超时
+          util.login({ url: '../index' });
+        }
+      }, function () {
+        wx.showToast({
+          title: '提交失败',
+        })
+      })
   },
   loadData: function(e){
     var that = this;
