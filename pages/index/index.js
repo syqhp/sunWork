@@ -6,7 +6,6 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    encryptedData:'',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -17,6 +16,7 @@ Page({
     })
   },
   onLoad: function () {
+    console.info(app.globalData.userInfo);
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -50,12 +50,11 @@ Page({
     
   },
   getUserInfo: function(e) {
-    console.log(e.detail.encryptedData)
     app.globalData.userInfo = e.detail.userInfo
+    console.info(app.globalData.userInfo);
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
-      encryptedData: e.detail.encryptedData
     })
   },
   getMessagess:function(){

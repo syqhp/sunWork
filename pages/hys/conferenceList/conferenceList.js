@@ -12,6 +12,9 @@ Page({
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
+    // this.loadData();
+  },
+  onShow: function () {
     this.loadData();
   },
   goDetail:function(){
@@ -93,12 +96,10 @@ Page({
             that.setData({
               followList: res.data
             })
-            console.info(that.data.followList);
           } else {
             that.setData({
               createList: res.data
             })
-            console.info(that.data.createList);
           }
         } else if (res.code == 400) {
           //弹窗提醒异常

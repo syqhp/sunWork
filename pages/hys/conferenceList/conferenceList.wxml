@@ -5,42 +5,39 @@
 
 <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
     <swiper-item >
-      <view wx:if="{{followList.length == 1}}" class="container">
+      <view wx:if="{{followList.length == 0}}" class="container">
         <text class="conferenceList-nickname" >你还没有关注的会议室</text>
-        <form bind:submit="testSubmit" report-submit="true">
-              <button formType="submit">发送模板消息</button>
-        </form>
       </view>
-      <view class='hy-list-wrap'>
-         <view class='hy-list'>
-          <view class='hy-list-left'>
-            <image src='../../../image/icon.jpg'></image>
+      <view wx:if="{{followList.length > 0}}" class='hy-list-wrap'>
+         <view class='hy-list' wx:for="{{followList}}" wx:key="" bindtap='goDetail'>
+            <view class='hy-list-left'>
+              <image src='../../../image/icon.jpg'></image>
+            </view>
+            <view class='hy-list-right'>
+              <view class='hy-list-rightT'>{{item.name}}</view>
+              <view class='hy-list-rightB'>{{item.remark}}</view>
+            </view>
           </view>
-          <view class='hy-list-right'>
-            <view class='hy-list-rightT'>会议室Demo</view>
-            <view class='hy-list-rightB'>这是虚拟的会议室，演示稿会议室使用</view>
-          </view>
-      </view>
-      </view>  
+        </view>  
     </swiper-item>
     <swiper-item>
-    <view wx:if="{{createList.length == 0}}" class="container">
-        <text class="conferenceList-nickname" >你还没有创建的会议室</text>
+      <view wx:if="{{createList.length == 0}}" class="container">
+          <text class="conferenceList-nickname" >你还没有创建的会议室</text>
       </view>
-      <view class='hy-list-wrap'>
-         <view class='hy-list' wx:for="{{createList}}" wx:key="" bindtap='goDetail'>
-          <view class='hy-list-left'>
-            <image src='../../../image/icon.jpg'></image>
-          </view>
-          <view class='hy-list-right'>
-            <view class='hy-list-rightT'>{{item.name}}</view>
-            <view class='hy-list-rightB'>{{item.remark}}</view>
-          </view>
+      <view wx:if="{{createList.length > 0}}" class='hy-list-wrap'>
+        <view class='hy-list' wx:for="{{createList}}" wx:key="" bindtap='goDetail'>
+            <view class='hy-list-left'>
+              <image src='../../../image/icon.jpg'></image>
+            </view>
+            <view class='hy-list-right'>
+              <view class='hy-list-rightT'>{{item.name}}</view>
+              <view class='hy-list-rightB'>{{item.remark}}</view>
+            </view>
+        </view>
+        <view class='add-hy' bindtap='create'>
+          <image src='../../../image/add.png'></image>
+          <text class='add-font' >创建 专属二维码门牌</text>
+        </view>
       </view>
-      <view class='add-hy'>
-      <image src='../../../image/add.png'></image>
-      <text class='add-font' bindtap='create'>创建 专属二维码门牌</text>
-    </view>
-    </view>
     </swiper-item>
 </swiper>

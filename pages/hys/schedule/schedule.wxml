@@ -2,7 +2,7 @@
 
 <view class='schedule-top'>
   <view class='schedule-col'>
-    <view class='schedule-col-t'>23</view>
+    <view class='schedule-col-t'><view>12</view>23</view>
     <view class='schedule-col-b'>今天</view>
   </view> 
 </view>

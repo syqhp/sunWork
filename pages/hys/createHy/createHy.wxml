@@ -1,34 +1,34 @@
 <view class='page-section'>
     <view class="weui-cells__title">填写会议信息</view>
-    <view class='weui-cells-wrap'>
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">主题</view>
+    <form  bindsubmit="formSubmit">
+      <view class='weui-cells-wrap'>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">名称</view>
+            </view>
+            <view class="weui-cell__bd "><input class='detail-h' name='name' placeholder='填写会议室名称' ></input></view>
           </view>
-          <view class="weui-cell__bd "><input class='detail-h' placeholder='填写会议主题' ></input></view>
-        </view>
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">备注</view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">备注</view>
+            </view>
+          <view class="weui-cell__bd "><input class='detail-h' name='remark' placeholder='填写位置等信息'></input></view>
           </view>
-          <view class="weui-cell__bd "><input class='detail-h' placeholder='填写备注信息'></input></view>
+           <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_switch">
+              <view class="weui-label">验证</view>
+              <view class="weui-cell__ft">
+                <switch bindchange="setVerification" />
+              </view>
+            </view>
+          </view>
         </view>
       </view>
-
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_switch">
-          <view class="weui-label">验证</view>
-          <view class="weui-cell__ft">
-            <switch />
-          </view>
-        </view>
-      </view>
-      </view>
-       <view class='detail-font'>如果开启，我们会帮助你验证预定此会议室用户的手机号</view>
-
-        <view class='schedule-footer active' bindtap='goWxCode'>下一步</view>
-    </view>
+      <view class='detail-font'>如果开启，我们会帮助你验证预定此会议室用户的手机号</view>
+      <button class='schedule-footer active' formType="submit">下一步</button>  
+    </form>
+</view>
 
 
     

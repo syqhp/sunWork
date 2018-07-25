@@ -1,11 +1,11 @@
 <view class="code">
   <view class='code-title'>会议室二维码已生成</view>
   <view class='code-img'>
-    <image src='../../../image/code.png'></image>
-    <image src='../../../image/big.png'></image>
+    <image src='https://syq.onecc.net/HYS/static/qrCode/08140412193213.png'></image>
+    <image src='../../../image/big.png' catchtap='show'></image>
   </view>
   <view class='code-font'>你可以直接保存到相册中，以便分享、邀请使用</view>
-  <view class='code-btn active'>保存到相册</view>
+  <view class='code-btn active' catchtap='saveImage'>保存到相册</view>
   <view class='code-title'>或者</view>
   <view class="weui-cells__title">填写邮件地址，接收你的会议室专属二维码门牌</view>
       <view class="weui-cells weui-cells_after-title">

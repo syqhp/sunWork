@@ -1,17 +1,21 @@
 <view>
   <view class="personal-header">
     <view class="personal-header-left">
-      <image src='http://chuantu.biz/t6/337/1530518084x-1404817748.png'></image>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image src='{{userInfo.headImage}}'></image>
+    </block>
+      
     </view>
     <view class="personal-header-right">
-      <text>姓名：<text>曲终无过</text></text>
-      <text>邮箱：<text>928929878@qq.com</text></text> 
+      <text>姓名：<text>{{userInfo.userName}}</text></text>
+      <text>邮箱：<text>{{userInfo.email}}</text></text> 
     </view>
   </view>
   <view class="personal-main">
     <view class="personal-row clearfix">
       <view class="personal-left">手机号</view>
-      <view class="personal-right">17682441227</view>
+      <view class="personal-right">{{userInfo.mobile}}</view>
     </view>
     <view class="personal-row clearfix" bindtap='goManagement'>
       <text class="personal-left" >会议室管理</text>
