@@ -28,11 +28,12 @@ Page({
     wx.navigateTo({
       url: '../../hys/select/select'
     })
+
   },
   getTime: function (e) {
     var num=this.data.num;
     var reserveTime = e.target.dataset.time;
-    console.log(reserveTime);
+    // console.log(reserveTime);
     this.setData({
       reserveTime: e.target.dataset.time,
     })
@@ -64,7 +65,7 @@ Page({
     util.requestLoading('/rest/api/findScheduleByConference', this.data.params, '正在加载',
       function (res) {
         if (res.code == 200) {
-          console.info(res);
+          // console.info(res);
 
           //跳转不同页面
           that.setData({
@@ -73,7 +74,7 @@ Page({
             dataTime: util.formatDate(new Date()),
             hysConferenceList: res.hysConferenceList
           })
-
+          console.log(res.data)
         } else if (res.code == 400) {
           //弹窗提醒异常
           const dataInfo = { content: res.message };

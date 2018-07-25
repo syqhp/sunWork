@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/hys/index",
+    "pages/hys/reserve/reserve",
     "pages/hys/revise/revise",
+    "pages/hys/index",
+    
     "pages/hys/hyReserveDetail/hyReserveDetail",
     "pages/hys/hyDetail/hyDetail",
-    "pages/hys/reserve/reserve",
+    
     "pages/hys/wxCode/wxCode",
     "pages/hys/createHy/createHy",
     "pages/hys/reserveDetail/reserveDetail",

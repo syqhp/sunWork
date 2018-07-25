@@ -13,15 +13,17 @@
       <view class='schedule-title-r' wx:for="{{hysConferenceList}}" wx:key="">{{hysConferenceList[index].conferenceName}}</view>
       <!--hysConferenceList[index].conferenceName为通过接口获取的会议室信息，不是通过全局变量获取的  -->
     </view>
-    <view class='schedule-main' wx:for="{{hydata}}" wx:key="">
-      <view class='schedule-row' wx:for="{{hydata[index]}}" wx:key="">
-        <view class='schedule-left'>{{item.date}}</view>
-      
-        <view class='schedule-right'>
-          <view class='schedule-right-r'></view>
+    <view class='schedule-main'>
+      <view class='schedule-row' >
+          <view class='schedule-left'>
+            <view class='schedule-left-col' >{{item[index].date}}</view>
+          </view>
+          <view class='schedule-right'>
+            <view class='schedule-right-col' >
+            </view>
+          </view>
         </view>
       </view>
-    </view>
   </view>
   <view class='schedule-footer {{reserveTime != ""?"active":""}}'>预定{{reserveTime}}</view>
 </view>

@@ -44,7 +44,7 @@ Page({
   // 确定select个数跳转
   goSchedule: function (e) {
     wx.switchTab({
-      url: '../../hys/schedule/schedule'
+      url: '../../hys/reserve/reserve'
     }) 
   },
 
