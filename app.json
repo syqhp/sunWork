@@ -1,14 +1,14 @@
 {
   "pages": [
+    "pages/hys/editHy/editHy",
     "pages/hys/schedule/schedule",
     "pages/hys/reserve/reserve",
-    
     "pages/hys/index",
     "pages/hys/revise/revise",
     "pages/hys/hyReserveDetail/hyReserveDetail",
     "pages/hys/hyDetail/hyDetail",
     "pages/hys/createHy/createHy",
-    "pages/hys/wxCode/wxCode",    
+    "pages/hys/wxCode/wxCode",
     "pages/hys/reserveDetail/reserveDetail",
     "pages/logs/logs",
     "pages/hys/select/select",
@@ -18,7 +18,6 @@
     "pages/index/index",
     "pages/hys/conferenceList/conferenceList",
     "pages/common/error/error"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

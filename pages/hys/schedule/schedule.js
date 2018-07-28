@@ -52,7 +52,7 @@ Page({
         if (res.code == 200) {
           console.info(res);
           var dataList = res.dateList;
-          var dataListAll = [dataList.slice(0,7), dataList.slice(7, 14), dataList.slice(14, 21), dataList.slice(21, 28), dataList.slice(28)];
+          var dataListAll = [dataList.slice(0,7), dataList.slice(7, 14), dataList.slice(14, 21), dataList.slice(21, 28)];
         
           //跳转不同页面
           that.setData({

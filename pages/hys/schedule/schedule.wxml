@@ -15,18 +15,45 @@
 <view class='schedule-bottom' >
     <view class='schedule-title' bindtap='dateUrl'>
       <view class='schedule-title-l'></view>
-      <view class='schedule-title-r'><image src='../../../image/icon.jpg'></image></view>
+      <view class='schedule-title-r'>
+        <image src='../../../image/icon.jpg'></image>
+      </view>
+      <view class='schedule-title-r'>
+        <image src='../../../image/icon.jpg'></image>
+      </view>
+      <view class='schedule-title-r'>
+        <image src='../../../image/icon.jpg'></image>
+      </view>
       <!--hysConferenceList[index].conferenceName为通过接口获取的会议室信息，不是通过全局变量获取的  -->
     </view>
     <view class='schedule-main'>
       <view class='schedule-row'>
           <view class='schedule-left'>
             <view>
-              <!-- <view class='schedule-left-col'></view> -->
+              <view class='schedule-left-col'>8:00</view>
+              <view class='schedule-left-col'>8:00</view>
+              <view class='schedule-left-col'>8:00</view>
+              <view class='schedule-left-col'>8:00</view>
+              <view class='schedule-left-col'>8:00</view>
             </view>
           </view>
           <view class='schedule-right'>
-            <!-- <view class='schedule-right-col' ></view> -->
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
+          </view>
+          <view class='schedule-right'>
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
+          </view>
+          <view class='schedule-right'>
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
+            <view class='schedule-right-col' ></view>
           </view>
         </view>
       </view>
