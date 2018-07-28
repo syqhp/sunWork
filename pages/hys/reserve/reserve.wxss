@@ -46,6 +46,12 @@
 .schedule-bottom{
   margin-bottom: 20rpx;
   border:0.5rpx solid #24C2B5;
+  position:absolute;
+  left: 20rpx;
+  right: 18rpx;
+  top: 163rpx;
+  bottom: 110rpx;
+  overflow: scroll;
 }
 .schedule-title{
   display: flex;
@@ -54,7 +60,10 @@
   line-height: 90rpx;
   background: #F7F7F7;
   border-bottom:0.5rpx solid #24C2B5;
-
+  position:fixed;
+  left: 20rpx;
+  right: 20rpx;
+  top: 164rpx;
 }
 .schedule-title-l{
   background: #24C2B5;
@@ -75,7 +84,7 @@
 
 
 .schedule-main{
-  
+  padding-top: 92rpx;
 
 }
 
@@ -114,6 +123,9 @@
   border-top: 2rpx dotted #24C2B5;
   box-sizing: border-box;
 }
+.schedule-right-col.active{
+  background: #24C2B5
+}
 
 
 
@@ -131,6 +143,10 @@
   text-align: center;
   height: 88rpx;
   line-height: 88rpx;
+   position:absolute;
+  left: 20rpx;
+  right: 18rpx;
+  bottom: 10rpx;
 }
 .schedule-footer.active{
   opacity: 1;

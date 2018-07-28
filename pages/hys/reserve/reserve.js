@@ -16,7 +16,14 @@ Page({
     dataTime:'',
     reserveTime:'',
     hysConferenceList:[],
-   
+    // 会议室位置
+    hyIndex:'-1',
+    // 开始时间位置
+    startIdex:-1, 
+    // 会议室id
+    endIndex: 50, 
+     // 点击次数
+    cek:0,
   },
   /**
    * 生命周期函数--监听页面加载
@@ -37,6 +44,30 @@ Page({
     this.setData({
       reserveTime: e.target.dataset.time,
     })
+
+  },
+  aaaa:function(e){
+    var hyIndex= e.currentTarget.dataset.index;
+    // console.log(hyIndex)
+    var startIdex= e.target.dataset.index;
+    console.log(startIdex)
+    var cek = e.target.dataset.cek;
+    
+    // e.target.dataset.cek = 1;
+    // var cek = e.target.dataset.cek;
+      // cek= 1;
+  
+// console.log(e)
+      
+ 
+      
+      this.setData({
+        cek: 1
+      })
+    console.log(cek)
+
+      // console.log(this.data.cek)
+    
 
   },
   /**
@@ -75,6 +106,7 @@ Page({
             hysConferenceList: res.hysConferenceList
           })
           console.log(res.data)
+          // console.log(res)
         } else if (res.code == 400) {
           //弹窗提醒异常
           const dataInfo = { content: res.message };

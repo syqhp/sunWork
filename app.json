@@ -1,10 +1,12 @@
 {
   "pages": [
+    "pages/hys/schedule/schedule",
+    "pages/hys/reserve/reserve",
+    
     "pages/hys/index",
     "pages/hys/revise/revise",
     "pages/hys/hyReserveDetail/hyReserveDetail",
     "pages/hys/hyDetail/hyDetail",
-    "pages/hys/reserve/reserve",
     "pages/hys/createHy/createHy",
     "pages/hys/wxCode/wxCode",    
     "pages/hys/reserveDetail/reserveDetail",
@@ -15,8 +17,7 @@
     "pages/hys/login/login",
     "pages/index/index",
     "pages/hys/conferenceList/conferenceList",
-    "pages/common/error/error",
-    "pages/hys/schedule/schedule"
+    "pages/common/error/error"
     
   ],
   "window": {

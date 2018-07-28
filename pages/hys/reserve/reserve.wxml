@@ -7,7 +7,10 @@
     </view>
   
 
-  <view class='schedule-bottom'>
+  
+</view>
+
+<view class='schedule-bottom'>
     <view class='schedule-title'>
       <view class='schedule-title-l' bindtap='goSelect'>✚</view>
       <view class='schedule-title-r' wx:for="{{hysConferenceList}}" wx:key="">{{hysConferenceList[index].conferenceName}}</view>
@@ -16,14 +19,14 @@
     <view class='schedule-main'>
       <view class='schedule-row' >
           <view class='schedule-left'>
-            <view class='schedule-left-col' >{{item[index].date}}</view>
-          </view>
-          <view class='schedule-right'>
-            <view class='schedule-right-col' >
+            <view wx:for="{{hydata[0]}}" wx:key="">
+              <view class='schedule-left-col' wx:if="{{item.showFs}}">{{item.date}}</view>
             </view>
+          </view>
+          <view class='schedule-right' wx:for="{{hydata}}" wx:key="item" wx:for-index="hyIdx" data-index="{{hyIdx}}" catchtap='aaaa'>
+            <view class='schedule-right-col {{cek== 1?"active":""}}' wx:for="{{item}}" wx:key="" data-cek="0" data-index="{{idx}}"  wx:for-index="idx" ></view>
           </view>
         </view>
       </view>
   </view>
-  <view class='schedule-footer {{reserveTime != ""?"active":""}}'>预定{{reserveTime}}</view>
-</view>
+   <view class='schedule-footer {{reserveTime != ""?"active":""}}'>预定{{reserveTime}}</view> 

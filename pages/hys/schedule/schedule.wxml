@@ -1,8 +1,34 @@
+<view class='content' >
 
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  
+    <swiper-item wx:for="{{dataListAll}}" wx:key="" class='schedule-top' >
+          <view class='schedule-col' wx:for="{{item}}" wx:key="" wx:for-item="items">
+              <view class='schedule-col-t' >{{items.day}}</view>
+              <view class='schedule-col-b '>{{items.week}}</view>
+          </view>
+    </swiper-item>
 
-<view class='schedule-top'>
-  <view class='schedule-col'>
-    <view class='schedule-col-t'><view>12</view>23</view>
-    <view class='schedule-col-b'>今天</view>
-  </view> 
+</swiper>
 </view>
+<view class='schedule-bottom' >
+    <view class='schedule-title' bindtap='dateUrl'>
+      <view class='schedule-title-l'></view>
+      <view class='schedule-title-r'><image src='../../../image/icon.jpg'></image></view>
+      <!--hysConferenceList[index].conferenceName为通过接口获取的会议室信息，不是通过全局变量获取的  -->
+    </view>
+    <view class='schedule-main'>
+      <view class='schedule-row'>
+          <view class='schedule-left'>
+            <view>
+              <!-- <view class='schedule-left-col'></view> -->
+            </view>
+          </view>
+          <view class='schedule-right'>
+            <!-- <view class='schedule-right-col' ></view> -->
+          </view>
+        </view>
+      </view>
+  </view>
+  
