@@ -3,25 +3,25 @@
     <view class='hy-top-bg'>
       <image src='../../../image/bg.jpeg'></image>
     </view>
-    <view class='hy-top-font'>
-      <text>慈宁宫</text>
-      <text>慈宁宫</text>
+    <view class='hy-top-font' wx:for="{{hysConferenceList}}" wx:key="">
+      <text>{{item.conferenceName}}</text>
+      <text>{{item.remark}}</text>
     </view>
   </view>
 </view>
 
 <view class='hy-main'>
-  <view class='hy-title'>2018年8月12日</view>
+  <view class='hy-title'>{{date}}</view>
   <view class='hy-row-wrap'>
-    <view class='hy-row'>
+    <view class='hy-row'  wx:for="{{hysScheduleList[0]}}" wx:key="">
       <view class='hy-left'>
-        <text>9:00</text>
+        <text>{{item.beginDate}}</text>
         <view class='line'>｜</view>
-        <text> 9:30</text>
+        <text>{{item.endDate}}</text>
      </view>
       <view class='hy-right'>
-        <view class='hy-right-t'>完美人生</view>
-        <view class='hy-right-b'>完美人生</view>
+        <view class='hy-right-t'>{{item.theme}}</view>
+        <view class='hy-right-b'>{{item.remark}}</view>
       </view>
     </view>
   </view>
@@ -31,7 +31,7 @@
     <view class='footer-nav-col'>
       <image src='../../../image/footer-back.png'></image>
     </view>
-    <view class='footer-nav-col3'>报名</view>
+    <view class='footer-nav-col3'>预定</view>
     <view class='footer-nav-col2' bindtap='getMore'>更多</view>
     <view class='footer-nav-col'>
       <image src='../../../image/forwarding.png'></image>

@@ -1,24 +1,127 @@
+.content{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.schedule-top{
+  border-top:0.5rpx solid #24C2B5;
+  border-bottom:0.5rpx solid #24C2B5;
+  width: 100%;
+   overflow: scroll; 
+   -webkit-overflow-scrolling:touch;
+   white-space: nowrap;
+  margin: 20rpx 0;
+  font-size: 0;
 
-@import "../../common/lib/weui.wxss";
-.schedule-footer.btn-bg{
- background: #E64340; 
 }
-.detail-h{
-  height:2.58823529em;
-  line-height:2.58823529em;
+.schedule-col{
+  border-left: 1rpx solid #24C2B5;
+  width: 99.928571rpx;
+  height: 120rpx;
+  text-align: center;
+  display: inline-block;
 }
-.weui-cells:last-child{
+.schedule-col.active{
+  background: #24C2B5;
+}
+.schedule-col:last-child{
+  border-right: 1rpx solid #24C2B5;
+}
+.schedule-col-t{
+  margin-top: 15rpx;
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #000;
+}
+.schedule-col-t.active,.schedule-col-b.active{
+  color: #fff !important;
+}
+.schedule-col-b{
+  font-size: 24rpx;
+  color: #24C2B5;
+}
+
+.schedule-bottom{
+  margin-bottom: 20rpx;
+  border:0.5rpx solid #24C2B5;
+}
+.schedule-title{
+  display: flex;
+  flex-direction:row;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #F7F7F7;
+  border-bottom:0.5rpx solid #24C2B5;
+
+}
+.schedule-title-l{
+  background: #24C2B5;
+  color: #fff;
+  width: 100rpx;
+  text-align: center;
+
+}
+.schedule-title-r{
+  font-size: 26rpx;
+  text-align: center;
+  flex: 1;
+  border-left: 2rpx solid #24C2B5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.schedule-main{
+  
+
+}
+
+.schedule-row{
+  display: flex;
+}
+.schedule-left{
+  width: 100rpx;
+  text-align: right;
+  font-size: 26rpx;
+  color: #24C2B5;
+  box-sizing: border-box;
+  
+}
+.schedule-left-col{
+   width: 100rpx;
+   height: 100rpx;
+   padding-right:10rpx;
+  box-sizing: border-box;
+}
+.schedule-right{
+  border-top:0.5rpx solid #24C2B5;
+  flex: 1;
+  border-right: 2rpx solid #24C2B5;
   margin-top: 20rpx;
 }
-.detail-font{
-margin-top:.77em;
-margin-bottom:.3em;
-padding-left:15px;
-padding-right:15px;
-color:#999999;
-font-size:14px;
+.schedule-right:last-child{
+  border-right:none;
+}
+.schedule-right-col{
+  height: 50rpx;
+  border-top: 2rpx solid #24C2B5;
+  box-sizing: border-box;
+}
+.schedule-right-col:nth-child(2n){
+  border-top: 2rpx dotted #24C2B5;
+  box-sizing: border-box;
 }
 
+
+
+.schedule-right-r.active{
+  background: #91E0D9;
+  border-left: 0.5rpx solid #24C2B5;
+}
+.line{border: 0.25rpx dotted #24C2B5;}
 .schedule-footer{
   margin:20rpx;
   background: #24C2B5;
@@ -29,7 +132,6 @@ font-size:14px;
   height: 88rpx;
   line-height: 88rpx;
 }
-
 .schedule-footer.active{
   opacity: 1;
 }

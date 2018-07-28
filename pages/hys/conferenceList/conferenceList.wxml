@@ -9,7 +9,7 @@
         <text class="conferenceList-nickname" >你还没有关注的会议室</text>
       </view>
       <view wx:if="{{followList.length > 0}}" class='hy-list-wrap'>
-         <view class='hy-list' wx:for="{{followList}}" wx:key="" bindtap='goDetail'>
+         <view class='hy-list' wx:for="{{followList}}" wx:key="" data-value="{{item.randomId}}" bindtap='goDetail'>
             <view class='hy-list-left'>
               <image src='../../../image/icon.jpg'></image>
             </view>
@@ -25,7 +25,7 @@
           <text class="conferenceList-nickname" >你还没有创建的会议室</text>
       </view>
       <view wx:if="{{createList.length > 0}}" class='hy-list-wrap'>
-        <view class='hy-list' wx:for="{{createList}}" wx:key="" bindtap='goDetail'>
+        <view class='hy-list' wx:for="{{createList}}" wx:key="" data-value="{{item.randomId}}"  bindtap='goDetail'>
             <view class='hy-list-left'>
               <image src='../../../image/icon.jpg'></image>
             </view>
@@ -34,10 +34,10 @@
               <view class='hy-list-rightB'>{{item.remark}}</view>
             </view>
         </view>
-        <view class='add-hy' bindtap='create'>
+      </view>
+      <view class='add-hy' bindtap='create'>
           <image src='../../../image/add.png'></image>
           <text class='add-font' >创建 专属二维码门牌</text>
         </view>
-      </view>
     </swiper-item>
 </swiper>

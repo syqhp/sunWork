@@ -17,9 +17,9 @@ Page({
   onShow: function () {
     this.loadData();
   },
-  goDetail:function(){
+  goDetail: function (event){
     wx.navigateTo({
-      url: '../hyReserveDetail/hyReserveDetail'
+      url: '../hyReserveDetail/hyReserveDetail?randomId=' + event.currentTarget.dataset.value
     })
   },
   create:function(){

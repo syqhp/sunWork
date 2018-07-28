@@ -21,22 +21,27 @@ Page({
             if (!util.isBlank(res.sessionId)) {
               wx.setStorageSync('header', res.sessionId)
             }
+            console.info(res);
             if (res.code == 200) {
               //跳转不同页面
               if (res.status == -1) {
                 wx.redirectTo({
                   url: 'login/login'
                 })
+                return 
               } else if (res.status == 1) {
+                console.info(111);
                 //调整成功页面
                 wx.switchTab({
                   url: 'conferenceList/conferenceList'
                 })
+                return ;
               } else {
                 //跳转异常页面
                 wx.redirectTo({
                   url: '../common/error/error?message=' + res.message
                 })
+                return 
               }
             } else if (res.code == 400) {
               //弹窗提醒异常
