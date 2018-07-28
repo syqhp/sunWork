@@ -9,7 +9,7 @@
     </view>
   </view>
 </view>
-
+ 
 <view class='hy-main'>
   <view class='hy-title'>{{date}}</view>
   <view class='hy-row-wrap'>

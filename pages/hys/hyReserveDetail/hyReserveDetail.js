@@ -10,32 +10,50 @@ Page({
     hysConferenceList:[],
     date:'',
     hysScheduleList:[],
+    type:false,
     params:{
       randomIds:''
     }
   },
   getMore: function (e) {
-    wx.showActionSheet({
-      itemList: ['二维码', '编辑'],
-      success: function (res) {
-        console.log(res.tapIndex)
-        if (res.tapIndex == 0) {
-          wx.navigateTo({
-            url: '../wxCode/wxCode'
-          })
-        }
-        if (res.tapIndex == 1) {
-          wx.navigateTo({
-            url: '../revise/revise'
-          })
-        }
-      },
-      fail: function (res) {
-       
+    var that = this;
+    if (that.data.type){
+      wx.showActionSheet({
+        itemList: ['二维码', '编辑'],
+        success: function (res) {
+          if (res.tapIndex == 0) {
+            wx.navigateTo({
+              url: '../wxCode/wxCode'
+            })
+          }
+          if (res.tapIndex == 1) {
+            wx.navigateTo({
+              url: '../editHy/editHy?randomId=' + that.data.params.randomIds
+            })
+          }
+        },
+        fail: function (res) {
 
 
-      }
-    })
+
+        }
+      })
+    }else{
+      wx.showActionSheet({
+        itemList: ['取消关注'],
+        success: function (res) {
+          if (res.tapIndex == 0) {
+            
+          }
+        },
+        fail: function (res) {
+
+
+
+        }
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -46,7 +64,7 @@ Page({
       params: {
         randomIds: options.randomId
       }
-    });
+    })
   },
 
   /**
@@ -64,11 +82,13 @@ Page({
     util.requestLoading('/rest/api/findScheduleInfoByConference', this.data.params, '正在加载',
       function (res) {
         if (res.code == 200) {
+          console.info(res);
           //跳转不同页面
           that.setData({
             hysConferenceList: res.hysConferenceList,
             date: res.date,
             hysScheduleList: res.data,
+            type: res.hysConferenceList[0].code
           });
         } else if (res.code == 400) {
           //弹窗提醒异常

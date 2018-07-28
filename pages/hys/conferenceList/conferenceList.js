@@ -16,6 +16,12 @@ Page({
   },
   onShow: function () {
     this.loadData();
+    var list=[];
+    for(var i=0;i<=23;i++){
+      var a = {};
+      a.id=i;
+      list[0]=a;
+    }
   },
   goDetail: function (event){
     wx.navigateTo({
