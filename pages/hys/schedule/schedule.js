@@ -11,15 +11,16 @@ Page({
       endDateTime:"",
       type:""
     },
+    hysConferenceList:[],
     dataListAll:[],
     dataList:[],
     dataTime: '',
     indicatorDots: false,
     autoplay: false,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    date: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00','8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00']
   },
-  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -53,15 +54,17 @@ Page({
           console.info(res);
           var dataList = res.dateList;
           var dataListAll = [dataList.slice(0,7), dataList.slice(7, 14), dataList.slice(14, 21), dataList.slice(21, 28)];
-        
+          var hysConferenceList = res.hysConferenceList;
           //跳转不同页面
           that.setData({
             dataList: res.dateList,
             dataTime: util.formatDate(new Date()),
             dataListAll: dataListAll,
+            hysConferenceList:res.hysConferenceList
           })
           // console.log(res.data)
           console.log(that.data.dataListAll)
+
       
         } else if (res.code == 400) {
           //弹窗提醒异常

@@ -1,0 +1,37 @@
+.enter-row{
+  font-size: 34rpx;
+  color: #2F4F4F;
+  margin: 80rpx 40rpx 0 40rpx;
+}
+.enter-row2{
+  font-size: 28rpx;
+  color: #b3a3a3;
+  margin: 20rpx 40rpx 0 40rpx;
+}
+.enter-row3{
+  font-size: 28rpx;
+  color: #b3a3a3;
+   margin: 40rpx 40rpx 0 40rpx;
+}
+.add-hy{
+  background: #fff;
+  margin:40rpx;
+  border: 2rpx solid #dcdcdc;
+  border-radius: 10rpx;
+  height: 140rpx;
+  text-align: left;
+  font-size: 0
+}
+.add-hy>image{
+  width: 70rpx;
+  height: 70rpx;
+  display: inline-block;
+  margin: 35rpx 30rpx 0 30rpx;
+}
+.add-font{
+  font-size:32rpx;
+  color: #ccc;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top:-68rpx;
+}

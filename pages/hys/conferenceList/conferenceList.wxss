@@ -1,20 +1,49 @@
 page{
   height: 100%;
+  background: #Fff;
+  z-index: -1;
+}
+.con-bom{
+  padding-top: 88rpx;
+  background: #f8f8f8;
 }
 .swiper-tab{
     width: 100%;
     border-bottom: 2rpx solid #ccc;
     text-align: center;
-    height: 88rpx;
-    line-height: 88rpx;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background: #fff;
+    
 }
 .swiper-tab-item{
     width: 50%; 
     color:#434343;
     font-size: 25rpx;
+    
+}
+.swiper-tab-item:first-child{
+  text-align: right;
+}
+.swiper-tab-item:first-child text{
+  margin-right: 40rpx;
+}
+.swiper-tab-item:last-child{
+  text-align: left;
+}
+.swiper-tab-item:last-child text{
+  margin-left: 40rpx;
+}
+.swiper-tab-item text{
+  height: 88rpx;
+    line-height: 88rpx;
+    padding-bottom: 24rpx;
 }
 .active{
     color:#00C4B6;
@@ -71,7 +100,7 @@ margin-top: 10rpx;
 }
 .add-hy{
   background: #fff;
-  margin:20rpx 0;
+  margin:20rpx 10rpx;
   border: 2rpx solid #dcdcdc;
   border-radius: 10rpx;
   height: 140rpx;

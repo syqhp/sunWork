@@ -1,9 +1,14 @@
+
 <view class="swiper-tab">
-    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">我关注的</view>
-    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">我创建的</view>
+    <view class="swiper-tab-item "  bindtap="clickTab">
+      <text class="{{currentTab==0?'active':''}}" data-current="0">我关注的</text>
+    </view>
+    <view class="swiper-tab-item "  bindtap="clickTab">
+      <text class="{{currentTab==1?'active':''}}" data-current="1">我创建的</text>
+    </view>
 </view>
 
-<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" class='con-bom'>
     <swiper-item >
       <view wx:if="{{followList.length == 0}}" class="container">
         <text class="conferenceList-nickname" >你还没有关注的会议室</text>
@@ -40,4 +45,5 @@
           <text class='add-font' >创建 专属二维码门牌</text>
         </view>
     </swiper-item>
+    
 </swiper>

@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/hys/editHy/editHy",
-    "pages/hys/schedule/schedule",
-    "pages/hys/reserve/reserve",
     "pages/hys/index",
+    "pages/hys/enter/enter",
+   
+    "pages/hys/editGr/editGr",
+    "pages/hys/schedule/schedule",
+    "pages/hys/editHy/editHy",
+    "pages/hys/reserve/reserve",
     "pages/hys/revise/revise",
     "pages/hys/hyReserveDetail/hyReserveDetail",
     "pages/hys/hyDetail/hyDetail",
@@ -18,10 +21,11 @@
     "pages/index/index",
     "pages/hys/conferenceList/conferenceList",
     "pages/common/error/error"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#fff",
     "backgroundColor": "#F8F8F8",
     "navigationBarTitleText": "会e室",
     "navigationBarTextStyle": "black"
