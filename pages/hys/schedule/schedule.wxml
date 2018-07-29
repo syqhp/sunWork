@@ -4,9 +4,9 @@
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   
     <swiper-item wx:for="{{dataListAll}}" wx:key="" class='schedule-top' >
-          <view class='schedule-col' wx:for="{{item}}" wx:key="" wx:for-item="items">
-              <view class='schedule-col-t' >{{items.day}}</view>
-              <view class='schedule-col-b '>{{items.week}}</view>
+          <view class='schedule-col  {{dataTime == items.time?"active":""}}' wx:for="{{item}}" wx:key="" wx:for-item="items" catchtap='clickDate' data-time='{{items.time}}'>
+              <view class='schedule-col-t  {{dataTime == items.time?"active":""}}' >{{items.day}}</view>
+              <view class='schedule-col-b  {{dataTime == items.time?"active":""}}'>{{items.week}}</view>
           </view>
     </swiper-item>
 
@@ -15,14 +15,8 @@
 <view class='schedule-bottom' >
     <view class='schedule-title' bindtap='dateUrl'>
       <view class='schedule-title-l'></view>
-      <view class='schedule-title-r'>
-        <image src='../../../image/icon.jpg'></image>
-      </view>
-      <view class='schedule-title-r'>
-        <image src='../../../image/icon.jpg'></image>
-      </view>
-      <view class='schedule-title-r'>
-        <image src='../../../image/icon.jpg'></image>
+      <view class='schedule-title-r' wx:for="{{hysConferenceList}}" wx:key="">
+        <image src="../../../image/icon.jpg"></image>
       </view>
       <!--hysConferenceList[index].conferenceName为通过接口获取的会议室信息，不是通过全局变量获取的  -->
     </view>
@@ -30,26 +24,11 @@
       <view class='schedule-row'>
           <view class='schedule-left'>
             <view>
-              <view class='schedule-left-col' wx:for="{{date}}" wx:key="">{{item}}</view>
+              <view class='schedule-left-col' wx:for="{{hyDate[0]}}" wx:key="" wx:if="{{item.showFs}}">{{item.date}}</view>
             </view>
           </view>
-          <view class='schedule-right'>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
-          </view>
-          <view class='schedule-right'>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
-          </view>
-          <view class='schedule-right'>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
-            <view class='schedule-right-col' ></view>
+          <view class='schedule-right' wx:for="{{hyDate}}" wx:key="">
+            <view class='schedule-right-col {{item.type==2 || item.type==3?"active":""}}' wx:for="{{item}}" wx:key="">{{item.type==2?item.theme:""}}</view>
           </view>
         </view>
       </view>

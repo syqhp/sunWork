@@ -7,14 +7,19 @@ Page({
    */
   data: {
     params: {
-      randomIds: '14281909272509',
-      dateTime:'',
+      beginDateTime:'', 
+      endDateTime:''
     },
     hydata:[],
     selectLength:'0',
+    dataListAll: [],
     dataList:[],
     dataTime:'',
     reserveTime:'',
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
     hysConferenceList:[],
     // 会议室位置
     hyIndex:'-1',
@@ -93,19 +98,23 @@ Page({
         randomIds:randomIds
       }
     })
-    util.requestLoading('/rest/api/findScheduleByConference', this.data.params, '正在加载',
+    util.requestLoading('/rest/api/findScheduleGetUser', this.data.params, '正在加载',
       function (res) {
         if (res.code == 200) {
           // console.info(res);
-
+          var dataList = res.dateList;
+          var dataListAll = [dataList.slice(0, 7), dataList.slice(7, 14), dataList.slice(14, 21), dataList.slice(21, 28)];
           //跳转不同页面
           that.setData({
             dataList: res.dateList,
             hydata:res.data,
             dataTime: util.formatDate(new Date()),
-            hysConferenceList: res.hysConferenceList
+            hysConferenceList: res.hysConferenceList,
+            dataList: res.dateList,
+            dataTime: res.beginDateTime,
+            dataListAll: dataListAll,
           })
-          console.log(res.data)
+          console.log(res)
           // console.log(res)
         } else if (res.code == 400) {
           //弹窗提醒异常

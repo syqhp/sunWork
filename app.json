@@ -1,12 +1,15 @@
 {
   "pages": [
-    "pages/hys/index",
+      "pages/hys/index",
+    "pages/hys/schedule/schedule",
+    "pages/hys/reserve/reserve",
+  
     "pages/hys/enter/enter",
    
     "pages/hys/editGr/editGr",
-    "pages/hys/schedule/schedule",
+    
     "pages/hys/editHy/editHy",
-    "pages/hys/reserve/reserve",
+    
     "pages/hys/revise/revise",
     "pages/hys/hyReserveDetail/hyReserveDetail",
     "pages/hys/hyDetail/hyDetail",

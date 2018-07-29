@@ -125,7 +125,9 @@
   box-sizing: border-box;
 }
 .schedule-right-col.active{
-  background: #24C2B5
+  background: #24C2B5;
+  opacity: 0.2;
+  z-index: -10
 }
 
 

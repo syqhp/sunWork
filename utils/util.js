@@ -1,6 +1,6 @@
 // const httpURL = "http://10.100.2.42:8080";
- const httpURL = "http://localhost:8080";
-// const httpURL = "https://syq.onecc.net/HYS";
+//  const httpURL = "http://localhost:8080";
+const httpURL = "https://syq.onecc.net/HYS";
 // 展示进度条的网络请求
 // url:网络请求的url
 // params:请求参数

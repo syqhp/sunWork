@@ -1,13 +1,16 @@
-<view class='content'>
-  <view class='schedule-top'>
-      <view class='schedule-col {{dataTime == item.time?"active":""}}' wx:for="{{dataList}}" wx:key="">
-        <view class='schedule-col-t {{dataTime == item.time?"active":""}}'>{{item.day}}</view>
-        <view class='schedule-col-b {{dataTime == item.time?"active":""}}'>{{item.week}}</view>
-      </view> 
-    </view>
-  
+<view class='content' >
 
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   
+    <swiper-item wx:for="{{dataListAll}}" wx:key="" class='schedule-top' >
+          <view class='schedule-col  {{dataTime == items.time?"active":""}}' wx:for="{{item}}" wx:key="" wx:for-item="items" catchtap='clickDate' data-time='{{items.time}}'>
+              <view class='schedule-col-t  {{dataTime == items.time?"active":""}}' >{{items.day}}</view>
+              <view class='schedule-col-b  {{dataTime == items.time?"active":""}}'>{{items.week}}</view>
+          </view>
+    </swiper-item>
+
+</swiper>
 </view>
 
 <view class='schedule-bottom'>

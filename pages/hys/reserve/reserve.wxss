@@ -9,19 +9,21 @@
   border-top:0.5rpx solid #24C2B5;
   border-bottom:0.5rpx solid #24C2B5;
   width: 100%;
-   overflow: scroll; 
-   -webkit-overflow-scrolling:touch;
-   white-space: nowrap;
+   /* overflow: scroll;  */
+   /* -webkit-overflow-scrolling:touch;*/
+  white-space: nowrap; 
   margin: 20rpx 0;
   font-size: 0;
+  height: 120rpx !important;
 
 }
 .schedule-col{
-  border-left: 1rpx solid #24C2B5;
-  width: 99.928571rpx;
+   border-left: 1rpx solid #24C2B5;
+  width: 14.28%;
   height: 120rpx;
   text-align: center;
   display: inline-block;
+  box-sizing: border-box;
 }
 .schedule-col.active{
   background: #24C2B5;

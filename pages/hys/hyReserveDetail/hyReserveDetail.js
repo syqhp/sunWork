@@ -13,7 +13,14 @@ Page({
     type:false,
     params:{
       randomIds:''
-    }
+    },
+    dataListAll: [],
+    dataList: [],
+    dataTime: '',
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
   },
   getMore: function (e) {
     var that = this;
@@ -82,13 +89,19 @@ Page({
     util.requestLoading('/rest/api/findScheduleInfoByConference', this.data.params, '正在加载',
       function (res) {
         if (res.code == 200) {
+          var dataList = res.dateList;
+          var dataListAll = [dataList.slice(0, 7), dataList.slice(7, 14), dataList.slice(14, 21), dataList.slice(21, 28)];
           console.info(res);
           //跳转不同页面
           that.setData({
             hysConferenceList: res.hysConferenceList,
             date: res.date,
             hysScheduleList: res.data,
-            type: res.hysConferenceList[0].code
+            type: res.hysConferenceList[0].code,
+            dataList: res.dateList,
+            dataTime: res.beginDateTime,
+            dataListAll: dataListAll,
+            
           });
         } else if (res.code == 400) {
           //弹窗提醒异常
@@ -145,4 +158,5 @@ Page({
   onShareAppMessage: function () {
   
   }
+  
 })
