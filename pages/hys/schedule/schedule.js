@@ -134,5 +134,15 @@ Page({
           title: '提交失败',
         })
       })
-  }
+  },
+  goDetail: function (event) {
+    wx.navigateTo({
+      url: '../hyReserveDetail/hyReserveDetail?randomId=' + event.currentTarget.dataset.id
+    })
+  },
+  goHyDetail: function (event) {
+    wx.navigateTo({
+      url: '../hyDetail/hyDetail?id=' + event.currentTarget.dataset.id
+    })
+  },
 })

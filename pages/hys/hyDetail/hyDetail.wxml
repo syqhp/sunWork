@@ -4,8 +4,8 @@
       <image src='../../../image/time.png'></image>
     </view>
     <view class='hyDetail-title-r'>
-      <view class='hyDetail-title-rt'>火焰山</view>
-      <view class='hyDetail-title-rb'>帅帅帅</view>
+      <view class='hyDetail-title-rt'>{{hydate.remark}}</view>
+      <view class='hyDetail-title-rb'>{{hydate.theme}}</view>
     </view>
   </view>
 

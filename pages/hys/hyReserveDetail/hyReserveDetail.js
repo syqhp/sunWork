@@ -12,7 +12,8 @@ Page({
     hysScheduleList:[],
     type:false,
     params:{
-      randomIds:''
+      randomIds:'',
+      dateTime:''
     },
     dataListAll: [],
     dataList: [],
