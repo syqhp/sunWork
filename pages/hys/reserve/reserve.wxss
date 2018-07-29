@@ -126,10 +126,17 @@
   box-sizing: border-box;
 }
 .schedule-right-col.active{
-  background: #24C2B5
+  background: #40f3e4
 }
-
-
+.schedule-right-col.active1{
+ background: #eee
+}
+.schedule-right-col.active2{
+   background: #e3e3e3
+}
+.schedule-right-col.active3{
+   background: #666
+}
 
 .schedule-right-r.active{
   background: #91E0D9;

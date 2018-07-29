@@ -104,7 +104,6 @@ Page({
               type: 'all'
             }
           });
-          console.info(that.data.beginDateTime);
         } else if (res.code == 400) {
           //弹窗提醒异常
           const dataInfo = { content: res.message };

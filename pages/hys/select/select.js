@@ -31,10 +31,6 @@ Page({
     var selectLength = e.detail.value.length;
     var name = e.detail.value;
     app.globalData.selectId = name;
-    console.info(e);
-    console.info(app.globalData.selectId)
-    console.log('checkbox发生change事件，携带name值为：', e.detail.value.length)
-
 
     
     this.setData({

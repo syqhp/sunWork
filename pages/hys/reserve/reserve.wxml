@@ -26,10 +26,10 @@
               <view class='schedule-left-col' wx:if="{{item.showFs}}">{{item.date}}</view>
             </view>
           </view>
-          <view class='schedule-right' wx:for="{{hydata}}" wx:key="item" wx:for-index="hyIdx" data-index="{{hyIdx}}" catchtap='aaaa'>
-            <view class='schedule-right-col {{cek== 1?"active":""}}' wx:for="{{item}}" wx:key="" data-cek="0" data-index="{{idx}}"  wx:for-index="idx" ></view>
+          <view class='schedule-right' wx:for="{{hydata}}" wx:key="" wx:for-index="hyIdx" >
+            <view class='schedule-right-col {{cell.type == 1?"active1":""}} {{cell.type == 2?"active2":""}} {{cell.type == 3?"active3":""}}{{hyIndex == hyIdx && cell.type == 0 && index>=startIdex && index<=endIdex?"active":""}}' wx:for="{{item}}" wx:key="" wx:for-item="cell"  wx:for-index="index" data-wzIndex="{{hyIdx}}" data-index="{{index}}"   catchtap='{{cell.type == 0?"checkView":""}}'>{{cell.date==cell.beginDate?cell.theme+" "+cell.remark:""}}</view>
           </view>
         </view>
       </view>
   </view>
-   <view class='schedule-footer {{reserveTime != ""?"active":""}}'>预定{{reserveTime}}</view> 
+   <view class='schedule-footer {{cek != 0?"active":""}}' catchtap='{{cek != 0?"createSchedule":""}}'>预定{{hyName}}{{hyBeginDate != ''?'('+hyBeginDate+'~'+hyEndDate+')':''}}</view> 
