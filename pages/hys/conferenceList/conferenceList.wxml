@@ -1,49 +1,56 @@
 
-<view class="swiper-tab">
-    <view class="swiper-tab-item "  bindtap="clickTab">
-      <text class="{{currentTab==0?'active':''}}" data-current="0">我关注的</text>
-    </view>
-    <view class="swiper-tab-item "  bindtap="clickTab">
-      <text class="{{currentTab==1?'active':''}}" data-current="1">我创建的</text>
-    </view>
-</view>
+  <view class="swiper-tab" wx:if="{{!conferenceFs}}">
+      <view class="swiper-tab-item "  bindtap="clickTab">
+        <text class="{{currentTab==0?'active':''}}" data-current="0">我关注的</text>
+      </view>
+      <view class="swiper-tab-item "  bindtap="clickTab">
+        <text class="{{currentTab==1?'active':''}}" data-current="1">我创建的</text>
+      </view>
+  </view>
 
-<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" class='con-bom'>
-    <swiper-item >
-      <view wx:if="{{followList.length == 0}}" class="container">
-        <text class="conferenceList-nickname" >你还没有关注的会议室</text>
-      </view>
-      <view wx:if="{{followList.length > 0}}" class='hy-list-wrap'>
-         <view class='hy-list' wx:for="{{followList}}" wx:key="" data-value="{{item.randomId}}" bindtap='goDetail'>
-            <view class='hy-list-left'>
-              <image src='../../../image/icon.jpg'></image>
+  <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" class='con-bom' wx:if="{{!conferenceFs}}">
+      <swiper-item >
+        <view wx:if="{{followList.length == 0}}" class="container">
+          <text class="conferenceList-nickname" >你还没有关注的会议室</text>
+        </view>
+        <view wx:if="{{followList.length > 0}}" class='hy-list-wrap'>
+          <view class='hy-list' wx:for="{{followList}}" wx:key="" data-value="{{item.randomId}}" bindtap='goDetail'>
+              <view class='hy-list-left'>
+                <image src='../../../image/icon.jpg'></image>
+              </view>
+              <view class='hy-list-right'>
+                <view class='hy-list-rightT'>{{item.name}}</view>
+                <view class='hy-list-rightB'>{{item.remark}}</view>
+              </view>
             </view>
-            <view class='hy-list-right'>
-              <view class='hy-list-rightT'>{{item.name}}</view>
-              <view class='hy-list-rightB'>{{item.remark}}</view>
-            </view>
+          </view>  
+      </swiper-item>
+      <swiper-item>
+        <view wx:if="{{createList.length == 0}}" class="container">
+            <text class="conferenceList-nickname" >你还没有创建的会议室</text>
+        </view>
+        <view wx:if="{{createList.length > 0}}" class='hy-list-wrap'>
+          <view class='hy-list' wx:for="{{createList}}" wx:key="" data-value="{{item.randomId}}"  bindtap='goDetail'>
+              <view class='hy-list-left'>
+                <image src='../../../image/icon.jpg'></image>
+              </view>
+              <view class='hy-list-right'>
+                <view class='hy-list-rightT'>{{item.name}}</view>
+                <view class='hy-list-rightB'>{{item.remark}}</view>
+              </view>
           </view>
-        </view>  
-    </swiper-item>
-    <swiper-item>
-      <view wx:if="{{createList.length == 0}}" class="container">
-          <text class="conferenceList-nickname" >你还没有创建的会议室</text>
-      </view>
-      <view wx:if="{{createList.length > 0}}" class='hy-list-wrap'>
-        <view class='hy-list' wx:for="{{createList}}" wx:key="" data-value="{{item.randomId}}"  bindtap='goDetail'>
-            <view class='hy-list-left'>
-              <image src='../../../image/icon.jpg'></image>
-            </view>
-            <view class='hy-list-right'>
-              <view class='hy-list-rightT'>{{item.name}}</view>
-              <view class='hy-list-rightB'>{{item.remark}}</view>
-            </view>
         </view>
-      </view>
-      <view class='add-hy' bindtap='create'>
-          <image src='../../../image/add.png'></image>
-          <text class='add-font' >创建 专属二维码门牌</text>
-        </view>
-    </swiper-item>
-    
-</swiper>
+        <view class='add-hy' bindtap='create'>
+            <image src='../../../image/add.png'></image>
+            <text class='add-font' >创建 专属二维码门牌</text>
+          </view>
+      </swiper-item>
+      
+  </swiper>
+<view class='enter-row' wx:if="{{conferenceFs }}">快速开始</view>
+<view class='enter-row2' wx:if="{{conferenceFs}}">欢迎使用 会e室</view>
+<view class='enter-row3' wx:if="{{conferenceFs}}">请为你的会议室：</view>
+<view class='add-hy' bindtap='create' wx:if="{{conferenceFs}}">
+  <image src='../../../image/add.png'></image>
+  <text class='add-font' >创建 专属二维码门牌</text>
+</view>

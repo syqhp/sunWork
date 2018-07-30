@@ -123,3 +123,19 @@ margin-top: 10rpx;
 swiper-item{
   overflow: scroll !important;
 }
+
+.enter-row{
+  font-size: 34rpx;
+  color: #2F4F4F;
+  margin: 80rpx 40rpx 0 40rpx;
+}
+.enter-row2{
+  font-size: 28rpx;
+  color: #b3a3a3;
+  margin: 20rpx 40rpx 0 40rpx;
+}
+.enter-row3{
+  font-size: 28rpx;
+  color: #b3a3a3;
+   margin: 40rpx 40rpx 0 40rpx;
+}

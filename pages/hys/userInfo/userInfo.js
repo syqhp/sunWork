@@ -9,6 +9,7 @@ Page({
     rightImg:"http://chuantu.biz/t6/337/1530515884x-1404817748.png",
     userInfo: {},
     hasUserInfo: false,
+    conferenceFs: app.globalData.conferenceFs,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     params: {
       headImage: '',

@@ -21,7 +21,6 @@ Page({
             if (!util.isBlank(res.sessionId)) {
               wx.setStorageSync('header', res.sessionId)
             }
-            console.info(res);
             if (res.code == 200) {
               //跳转不同页面
               if (res.status == -1) {

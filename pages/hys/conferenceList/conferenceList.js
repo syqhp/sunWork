@@ -5,6 +5,7 @@ Page({
     currentTab: 0,
     followList:[],
     createList:[],
+    conferenceFs: app.globalData.conferenceFs,
     params:{
       type:'follow',
       formId: ''
@@ -105,6 +106,18 @@ Page({
           } else {
             that.setData({
               createList: res.data
+            })
+          }
+          if (that.data.followList.length == 0 && that.data.createList.length == 0){
+            
+            app.globalData.conferenceFs = true;
+            that.setData({
+              conferenceFs: app.globalData.conferenceFs
+            })
+          }else{
+            app.globalData.conferenceFs = false;
+            that.setData({
+              conferenceFs: app.globalData.conferenceFs
             })
           }
         } else if (res.code == 400) {

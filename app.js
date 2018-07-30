@@ -39,6 +39,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    selectId:[] //以后注意定义！！注意注意！！
+    selectId:[],
+    conferenceFs:false//当前用户没有关注和创建会议室时为true
   }
 })

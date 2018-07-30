@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  create: function(){
+    wx.navigateTo({
+      url: '../createHy/createHy'
+    })
   }
 })

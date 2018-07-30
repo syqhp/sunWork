@@ -17,7 +17,7 @@
       <view class="personal-left">手机号</view>
       <view class="personal-right">{{userInfo.mobile}}</view>
     </view>
-    <view class="personal-row clearfix" bindtap='goManagement'>
+    <view class="personal-row clearfix" bindtap='goManagement' wx:if="{{}}">
       <text class="personal-left" >会议室管理</text>
       <view class="personal-right">
        <image src='http://chuantu.biz/t6/337/1530515884x-1404817748.png'></image>

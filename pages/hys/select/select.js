@@ -56,50 +56,65 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this;
-    util.requestLoading('/rest/api/findConferenceList', this.data.params, '正在加载',
-      function (res) {
-        if (res.code == 200) {
-          //跳转不同页面
-          if (that.data.params.type == 'follow') {
-            that.setData({
-              followList: res.data
-            }) 
-          } else {
-            //判断是否需要选中，app.globalData.selectId为全局的选中id，注意selectId需要在app.js 中定义，效果等同于你之前的name，但是你之前对name没有在app.js中定义，这是有问题的，可以点开app.js查看，变量必须先定义后使用，以后注意，这里拿全局id去匹配页面所有会议室随机id，匹配上的说明是选中的，打上fs=true的标记，页面用checked=fs来使元素选中
-            for (var index in res.data) {
-              console.log(res.data);
-              res.data[index].fs = false;
-              for (var index2 in app.globalData.selectId) {
-                if (res.data[index].randomId == app.globalData.selectId[index2]) {
-                  res.data[index].fs = true;
-                }
-              }
-
-            }
-            that.setData({
-              createList: res.data
+    if (app.globalData.conferenceFs){
+      wx.showModal({
+        title: '提示',
+        content: '您还没有任何会议室，先创建一个吧！',
+        showCancel:false,
+        success: function (res) {
+          if (res.confirm) {
+            wx.switchTab({
+              url: '../conferenceList/conferenceList'
             })
-          }
-        } else if (res.code == 400) {
-          //弹窗提醒异常
-          const dataInfo = { content: res.message };
-          util.showMessage(dataInfo);
-
-        } else if (res.code == 410) {
-          //跳页面提醒异常
-          wx.redirectTo({
-            url: '../../common/error/error?message=' + res.message
-          })
-        } else if (res.code == 420) {
-          //登陆超时
-          util.login({ url: '../index' });
+          } 
         }
-      }, function () {
-        wx.showToast({
-          title: '提交失败',
-        })
       })
+    }else{
+      var that = this;
+      util.requestLoading('/rest/api/findConferenceList', this.data.params, '正在加载',
+        function (res) {
+          if (res.code == 200) {
+            //跳转不同页面
+            if (that.data.params.type == 'follow') {
+              that.setData({
+                followList: res.data
+              })
+            } else {
+              //判断是否需要选中，app.globalData.selectId为全局的选中id，注意selectId需要在app.js 中定义，效果等同于你之前的name，但是你之前对name没有在app.js中定义，这是有问题的，可以点开app.js查看，变量必须先定义后使用，以后注意，这里拿全局id去匹配页面所有会议室随机id，匹配上的说明是选中的，打上fs=true的标记，页面用checked=fs来使元素选中
+              for (var index in res.data) {
+                res.data[index].fs = false;
+                for (var index2 in app.globalData.selectId) {
+                  if (res.data[index].randomId == app.globalData.selectId[index2]) {
+                    res.data[index].fs = true;
+                  }
+                }
+
+              }
+              that.setData({
+                createList: res.data
+              })
+            }
+          } else if (res.code == 400) {
+            //弹窗提醒异常
+            const dataInfo = { content: res.message };
+            util.showMessage(dataInfo);
+
+          } else if (res.code == 410) {
+            //跳页面提醒异常
+            wx.redirectTo({
+              url: '../../common/error/error?message=' + res.message
+            })
+          } else if (res.code == 420) {
+            //登陆超时
+            util.login({ url: '../index' });
+          }
+        }, function () {
+          wx.showToast({
+            title: '提交失败',
+          })
+        })
+    }
+    
   },
 
   /**
