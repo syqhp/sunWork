@@ -30,7 +30,6 @@ Page({
                 })
                 return 
               } else if (res.status == 1) {
-                console.info(111);
                 //调整成功页面
                 wx.switchTab({
                   url: 'conferenceList/conferenceList'

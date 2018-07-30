@@ -50,13 +50,11 @@ Page({
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
-    console.info(app.globalData.userInfo);
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
     })
   },
   getMessagess:function(){
-    console.info(111);
   }
 })

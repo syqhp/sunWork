@@ -7,8 +7,8 @@ Page({
    */
   data: {
     params: {
-      beginDateTime:'', 
-      endDateTime:''
+      randomIds:'',
+      dateTime:''
     },
     hydata:[],
     selectLength:'0',
@@ -110,6 +110,24 @@ Page({
   onShareAppMessage: function () {
     
   },
+  clickDate:function(e){
+    var that = this;
+    that.setData({
+      hyIndex: -1,
+      // 开始时间位置
+      startIdex: -1,
+      // 会议室id
+      endIdex: -1,
+      // 点击次数
+      cek: 0,
+      params: {
+        randomIds: that.data.params.randomIds,
+        dateTime: e.currentTarget.dataset.time
+      }
+    })
+    console.info(that.data.params);
+    that.findScheduleByConference();
+  },
   goSelect: function (e) {
     wx.navigateTo({
       url: '../../hys/select/select'
@@ -205,20 +223,22 @@ Page({
       hyName: that.data.hysConferenceList[hyIndex].conferenceName,
       hyDateTime: that.data.dataTime,
       hyBeginDate: hyBeginDate,
-      hyBeginDateTime: that.data.dataTime + ' ' + hyBeginDate,
+      hyBeginDateTime: that.data.dataTime + ' ' + hyBeginDate+':00',
       hyEndDate: hyEndDate,
-      hyEndDateTime: that.data.dataTime + ' ' + hyEndDate
+      hyEndDateTime: that.data.dataTime + ' ' + hyEndDate+':00'
     })
   },
   createSchedule: function(){
-    wx.redirectTo({
-      url: '../common/error/error?message=' + res.message
+    var that = this;
+    wx.navigateTo({
+      url: '../reserveDetail/reserveDetail?hyRandomId=' + that.data.hyRandomId + '&hyName=' + that.data.hyName + '&hyDateTime=' + that.data.hyDateTime + '&hyBeginDate=' + that.data.hyBeginDate + '&hyBeginDateTime=' + that.data.hyBeginDateTime + '&hyEndDate=' + that.data.hyEndDate + '&hyEndDateTime=' + that.data.hyEndDateTime
     })
   },
   findScheduleByConference: function(){
     var that = this;
     util.requestLoading('/rest/api/findScheduleByConference', that.data.params, '正在加载',
       function (res) {
+        console.info(res);
         if (res.code == 200) {
           var dataList = res.dateList;
           var dataListAll = [dataList.slice(0, 7), dataList.slice(7, 14), dataList.slice(14, 21), dataList.slice(21, 28)];
