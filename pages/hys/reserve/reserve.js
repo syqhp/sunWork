@@ -103,13 +103,6 @@ Page({
   onReachBottom: function () {
     
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  },
   clickDate:function(e){
     var that = this;
     that.setData({
@@ -125,7 +118,6 @@ Page({
         dateTime: e.currentTarget.dataset.time
       }
     })
-    console.info(that.data.params);
     that.findScheduleByConference();
   },
   goSelect: function (e) {
@@ -137,7 +129,6 @@ Page({
   getTime: function (e) {
     var num = this.data.num;
     var reserveTime = e.target.dataset.time;
-    // console.log(reserveTime);
     this.setData({
       reserveTime: e.target.dataset.time,
     })
@@ -238,7 +229,6 @@ Page({
     var that = this;
     util.requestLoading('/rest/api/findScheduleByConference', that.data.params, '正在加载',
       function (res) {
-        console.info(res);
         if (res.code == 200) {
           var dataList = res.dateList;
           var dataListAll = [dataList.slice(0, 7), dataList.slice(7, 14), dataList.slice(14, 21), dataList.slice(21, 28)];
@@ -251,8 +241,6 @@ Page({
             dataTime: res.date,
             dataListAll: dataListAll,
           })
-          console.log(that.data.hydata)
-          // console.log(res)
         } else if (res.code == 400) {
           //弹窗提醒异常
           const dataInfo = { content: res.message };

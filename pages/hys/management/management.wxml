@@ -22,7 +22,7 @@
   </view>
 </view>
 <view class='date-main'>
-    <view class='date-row-wrap' wx:for="{{dataList}}" wx:key="" bindtap='goDetail'>
+    <view class='date-row-wrap' wx:for="{{dataList}}" wx:key="">
       <view class='date-row-top'>
           <view class='date-row-topl'>
               <image src='../../../image/icon.jpg'></image>

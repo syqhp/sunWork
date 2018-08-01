@@ -15,9 +15,9 @@
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   
     <swiper-item wx:for="{{dataListAll}}" wx:key="" class='schedule-top' >
-          <view class='schedule-col  {{dataTime == items.time?"active":""}}' wx:for="{{item}}" wx:key="" wx:for-item="items" catchtap='clickDate' data-time='{{items.time}}'>
-              <view class='schedule-col-t  {{dataTime == items.time?"active":""}}' >{{items.day}}</view>
-              <view class='schedule-col-b  {{dataTime == items.time?"active":""}}'>{{items.week}}</view>
+          <view class='schedule-col  {{date == items.time?"active":""}}' wx:for="{{item}}" wx:key="" wx:for-item="items" catchtap='clickDate' data-time='{{items.time}}'>
+              <view class='schedule-col-t  {{date == items.time?"active":""}}' >{{items.day}}</view>
+              <view class='schedule-col-b  {{date == items.time?"active":""}}'>{{items.week}}</view>
           </view>
     </swiper-item>
 
@@ -26,7 +26,7 @@
 <view class='hy-main'>
   <view class='hy-title'>{{date}}</view>
   <view class='hy-row-wrap'>
-    <view class='hy-row'  wx:for="{{hysScheduleList[0]}}" wx:key="">
+    <view class='hy-row' catchtap='goScheduleDetail' data-id='{{item.id}}' wx:for="{{hysScheduleList[0]}}" wx:key="">
       <view class='hy-left'>
         <text>{{item.beginDate}}</text>
         <view class='line'>｜</view>
@@ -41,12 +41,12 @@
 </view>
 
   <view class='footer-nav'>
-    <view class='footer-nav-col'>
+    <view class='footer-nav-col' catchtap='goConferenceList'>
       <image src='../../../image/footer-back.png'></image>
     </view>
-    <view class='footer-nav-col3'>预定</view>
+    <view class='footer-nav-col3' data-randomid='{{hysConferenceList[0].randomId}}' catchtap='goReserve'>预定</view>
     <view class='footer-nav-col2' bindtap='getMore'>更多</view>
-    <view class='footer-nav-col'>
+    <button class='footer-nav-col' open-type="share">
       <image src='../../../image/forwarding.png'></image>
-    </view>
+    </button>
   </view>

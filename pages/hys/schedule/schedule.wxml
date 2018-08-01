@@ -28,7 +28,7 @@
             </view>
           </view>
           <view class='schedule-right' wx:for="{{hyDate}}" wx:key="">
-            <view class='schedule-right-col {{item.type==2 || item.type==3?"active":""}}' wx:for="{{item}}" wx:key="" catchtap='goHyDetail' data-id="{{item.id}}">{{item.type==2?item.theme:""}}</view>
+            <view class='schedule-right-col {{item.type==2 || item.type==3?"active":""}}' wx:for="{{item}}" wx:key="" catchtap='{{item.type==2 || item.type==3?"goHyDetail":""}}' data-id="{{item.id}}">{{item.date==item.beginDate?item.theme+" "+item.remark:""}}</view>
           </view>
         </view>
       </view>

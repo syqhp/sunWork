@@ -1,9 +1,9 @@
 
   <view class="swiper-tab" wx:if="{{!conferenceFs}}">
-      <view class="swiper-tab-item "  bindtap="clickTab">
+      <view class="swiper-tab-item "  catchtap="clickTab">
         <text class="{{currentTab==0?'active':''}}" data-current="0">我关注的</text>
       </view>
-      <view class="swiper-tab-item "  bindtap="clickTab">
+      <view class="swiper-tab-item "  catchtap="clickTab">
         <text class="{{currentTab==1?'active':''}}" data-current="1">我创建的</text>
       </view>
   </view>

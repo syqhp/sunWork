@@ -3,7 +3,7 @@ var util = require('../../../utils/util.js')
 Page({
 
   /**
-   * 页面的初始数据
+   * 页面的初始数据 
    */
   data: {
     hyName: '',
@@ -37,7 +37,8 @@ Page({
         remark: '',
         randomId: options.hyRandomId,
         startDateTime: options.hyBeginDateTime,
-        endDateTime: options.hyEndDateTime
+        endDateTime: options.hyEndDateTime,
+        formId:''
       }
     })
   },
@@ -83,13 +84,6 @@ Page({
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   watchTheme:function(e){
     var that = this;
     if (e.detail.value != ''){
@@ -124,12 +118,14 @@ Page({
         remark: e.detail.value.remark,
         randomId: that.data.params.randomId,
         startDateTime: that.data.params.startDateTime,
-        endDateTime: that.data.params.endDateTime
+        endDateTime: that.data.params.endDateTime,
+        formId: e.detail.value.formId
       }
     })
     util.requestLoading('/rest/api/createSchedule', that.data.params, '正在创建',
       function (res) {
         if (res.code == 200) {
+          var id = res.id;
           wx.showModal({
             title: '预定成功',
             content: '您成功预定' + that.data.hyDateTime + ' ' + that.data.hyBeginDate + '至' + that.data.hyEndDate + '的 ' + that.data.hyName + ' 会议室',
@@ -137,7 +133,9 @@ Page({
             confirmText: '查看详情',
             success: function (res) {
               if (res.confirm) {
-                console.log('用户点击确定')
+                wx.redirectTo({
+                  url: '../hyDetail/hyDetail?id=' + id,
+                })
               } else if (res.cancel) {
                 wx.switchTab({
                   url: '../reserve/reserve'
@@ -145,7 +143,6 @@ Page({
               }
             }
           })
-          // console.log(res)
         } else if (res.code == 400) {
           //弹窗提醒异常
           const dataInfo = { content: res.message };

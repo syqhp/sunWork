@@ -135,7 +135,7 @@
    background: #e3e3e3
 }
 .schedule-right-col.active3{
-   background: #666
+   background: #DCDCDC
 }
 
 .schedule-right-r.active{

@@ -66,13 +66,6 @@ Page({
   onReachBottom: function () {
   
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  },
   show: function(e){
 
     wx.previewImage({
@@ -98,7 +91,6 @@ Page({
         emailTap: ''
       })
     }
-    console.info(this.data);
   },
   sendEmail: function() {
     util.requestLoading('/rest/api/sendEmail', this.data.params, '正在发送',
@@ -131,7 +123,6 @@ Page({
     wx.downloadFile({
       url: that.data.imgUrl,
       success: function (res) {
-        console.log(res);
         //图片保存到本地
         wx.saveImageToPhotosAlbum({
           filePath: res.tempFilePath,

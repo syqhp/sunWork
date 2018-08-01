@@ -1,5 +1,5 @@
 <view>
-  <view class="personal-header">
+  <view class="personal-header" data-name='{{userInfo.userName}}' data-email='{{userInfo.email}}' catchtap='goEditGr'>
     <view class="personal-header-left">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -17,7 +17,7 @@
       <view class="personal-left">手机号</view>
       <view class="personal-right">{{userInfo.mobile}}</view>
     </view>
-    <view class="personal-row clearfix" bindtap='goManagement' wx:if="{{}}">
+    <view class="personal-row clearfix" bindtap='goManagement' wx:if="{{!conferenceFs}}">
       <text class="personal-left" >会议室管理</text>
       <view class="personal-right">
        <image src='http://chuantu.biz/t6/337/1530515884x-1404817748.png'></image>

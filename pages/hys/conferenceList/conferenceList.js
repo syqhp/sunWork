@@ -58,7 +58,7 @@ Page({
   //点击切换
   clickTab: function (e) {
     var that = this;
-    if (this.data.currentTab === e.target.dataset.current) {
+    if (that.data.currentTab == e.target.dataset.current) {
       return false;
     } else {
       that.setData({
@@ -103,18 +103,17 @@ Page({
             that.setData({
               followList: res.data
             })
-          } else {
+          }else{
             that.setData({
               createList: res.data
             })
           }
-          if (that.data.followList.length == 0 && that.data.createList.length == 0){
-            
+          if (res.fs.length == 0) {
             app.globalData.conferenceFs = true;
             that.setData({
               conferenceFs: app.globalData.conferenceFs
             })
-          }else{
+          } else {
             app.globalData.conferenceFs = false;
             that.setData({
               conferenceFs: app.globalData.conferenceFs

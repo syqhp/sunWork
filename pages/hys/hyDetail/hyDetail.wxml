@@ -13,17 +13,17 @@
     <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell">
           <view class="weui-cell__bd">会议室</view>
-          <view class="weui-cell__ft">火焰山</view>
+          <view class="weui-cell__ft">{{hydate.conferenceName}}</view>
         </view>
      <view class="weui-cell">
           <view class="weui-cell__bd">会议时间</view>
-          <view class="weui-cell__ft ">2018-08-12 11:00 至 11:30</view>
+          <view class="weui-cell__ft ">{{hydate.date}} {{hydate.beginDate}} 至 {{hydate.endDate}}</view>
         </view>
         </view>
   </view>
 
 <view class='hyDetail-row-wrap'>
-  <view class='hyDetail-row'>
+  <view class='hyDetail-row' data-randomid = '{{hydate.conferenceRandomId}}' catchtap='goHysDetail'>
     <view class='hyDetail-row-l'>会议室</view>
     <view class='hyDetail-row-r'>
       <view class='hyDetail-title'>
@@ -31,8 +31,8 @@
           <image src='../../../image/icon.jpg'></image>
         </view>
         <view class='hyDetail-title-r'>
-          <view class='hyDetail-title-rt'>火焰山</view>
-          <view class='hyDetail-title-rb'>帅帅帅</view>
+          <view class='hyDetail-title-rt'>{{hydate.conferenceName}}</view>
+          <view class='hyDetail-title-rb'>{{hydate.remark}}</view>
         </view>
       </view>
     </view>
@@ -42,34 +42,32 @@
     <view class='hyDetail-row-l'>发起人</view>
     <view class='hyDetail-row-r '>
     <view class='hyDetail-bor'>
-      <view class='wx-icon'><image src='../../../image/icon.jpg'></image></view>
-      <text class='wx-name'>FlyFlyFlyFFly</text>
+      <view class='wx-icon'><image src='{{hydate.createHysUserImage}}'></image></view>
+      <text class='wx-name'>{{hydate.createHysUserName}}</text>
     </view>
     </view>
   </view>
 
    <view class='hyDetail-row'>
-    <view class='hyDetail-row-l'>参与人（1）</view>
+    <view class='hyDetail-row-l'>参与人（{{hydate.partakeUser.length}}）</view>
     <view class='hyDetail-row-r'>
-      <view class='hyDetail-bor'>
-        <view class='wx-icon'><image src='../../../image/icon.jpg'></image></view>
-        <text class='wx-name'>Fly</text>
-      </view>
-      <view class='hyDetail-bor'>
-        <view class='wx-icon'><image src='../../../image/icon.jpg'></image></view>
-        <text class='wx-name'>Fly</text>
+      <view class='hyDetail-bor' wx:for="{{hydate.partakeUser}}" wx:key="">
+        <view class='wx-icon'><image src='{{item.headImage}}'></image></view>
+        <text class='wx-name'>{{item.name}}</text>
       </view>
     </view>
   </view>
 
 </view>
   <view class='footer-nav'>
-    <view class='footer-nav-col'>
+    <view class='footer-nav-col' catchtap='goBack'>
       <image src='../../../image/footer-back.png'></image>
     </view>
-    <view class='footer-nav-col3'>报名</view>
-    <view class='footer-nav-col2' bindtap='getMore'>更多</view>
-    <view class='footer-nav-col'>
+    <form bindsubmit="formSubmit" report-submit='true'>
+      <button class='footer-nav-col3' formType="submit">{{singUp?"取消报名":"报名"}}</button>      
+    </form>
+    <view class='footer-nav-col2' catchtap='getMore'>更多</view>
+    <button class='footer-nav-col' open-type="share">
       <image src='../../../image/forwarding.png'></image>
-    </view>
+    </button>
   </view>

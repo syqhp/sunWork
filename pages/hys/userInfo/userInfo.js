@@ -14,14 +14,28 @@ Page({
     params: {
       headImage: '',
       nickName: ''
-    }
+    } 
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.userInfo) {
     
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    if (app.globalData.userInfo) {
+
       this.setUserInfo(app.globalData.userInfo.avatarUrl, app.globalData.userInfo.nickName)
     } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -38,20 +52,6 @@ Page({
         }
       })
     }
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
   },
 
   /**
@@ -81,12 +81,11 @@ Page({
   onReachBottom: function () {
     
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
+  goEditGr: function(e){
+    console.info(e.currentTarget.dataset.name);
+    wx.navigateTo({
+      url: '../editGr/editGr?name=' + e.currentTarget.dataset.name + '&email=' + e.currentTarget.dataset.email
+    })
   },
   goManagement: function () {
     wx.navigateTo({
@@ -129,7 +128,7 @@ Page({
         }
       }, function () {
         wx.showToast({
-          title: '提交失败',
+          title: '加载失败',
         })
       })
   }

@@ -1,5 +1,5 @@
 <view class='detail'>
-<form bindsubmit="formSubmit">
+<form bindsubmit="formSubmit" report-submit='true'>
   <view class='page-body'>
   <view class='page-section'>
     <view class="weui-cells__title">填写会议信息</view>

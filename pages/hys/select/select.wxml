@@ -20,7 +20,7 @@
     </view>
   </view>
   <view class='select-footer-wrap'>
-   <view class='select-footer {{selectLength>0?"active":""}}' bindtap='goSchedule'>确定
+   <view class='select-footer active' bindtap='goSchedule'>确定
    {{selectLength>0?"(已选:"+selectLength+"个）":""}}
    </view>
   </view>
