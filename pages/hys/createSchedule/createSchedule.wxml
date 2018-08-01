@@ -1,0 +1,54 @@
+<view class='page-section'>
+    <view class="weui-cells__title">填写会议信息</view>
+    <form  bindsubmit="formSubmit">
+      <view class='weui-cells-wrap'>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">主题</view>
+            </view>
+            <view class="weui-cell__bd "><input class='detail-h' name='theme'  placeholder='填写会议主题' ></input></view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">备注</view>
+            </view>
+          <view class="weui-cell__bd "><input class='detail-h' name='remark'  placeholder='填写会议描述'></input></view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells__title">会议日程</view>
+      <view class='weui-cells-wrap'>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">会议室</view>
+            </view>
+            <view class="weui-cell__bd "><input class='detail-h' value='{{hyName}}'  ></input></view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">会议时间</view>
+            </view>
+          <view class="weui-cell__bd "><input class='detail-h' value='{{hyDateTime}} {{hyBeginDate}}至{{hyEndDate}}'></input></view>
+          </view>
+        </view>
+      </view>
+       <view class='weui-cells-wrap'>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_switch">
+              <view class="weui-label">验证</view>
+              <view class="weui-cell__ft">
+                <switch bindchange="setVerification" />
+              </view>
+            </view>
+          </view>
+       </view>
+      
+      <view class='detail-font'>设置为私有，会议信息对非参会人员隐藏</view>
+      <button class='schedule-footer active' formType="submit">确认</button>  
+    </form>
+</view>
+
+
+    
