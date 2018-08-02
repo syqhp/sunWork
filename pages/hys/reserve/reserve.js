@@ -72,7 +72,9 @@ Page({
       cek: 0,
       params: {
         randomIds:randomIds
-      }
+      },
+      hyBeginDate:'',
+      hyEndDate:''
     })
     that.findScheduleByConference();
   },
@@ -200,7 +202,7 @@ Page({
     if (endIdex == 47){
       hyBeginDate = that.data.hydata[hyIndex][startIdex].date;
       hyEndDate = '00:00';
-    }else{
+    } else if (startIdex != -1){
       hyBeginDate = that.data.hydata[hyIndex][startIdex].date;
       hyEndDate = that.data.hydata[hyIndex][endIdex + 1].date;
     }

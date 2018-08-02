@@ -17,7 +17,8 @@ Page({
       remark: '',
       randomId: '',
       startDateTime: '',
-      endDateTime: ''
+      endDateTime: '',
+      formId:''
     }
   },
 
@@ -110,6 +111,7 @@ Page({
     })
   },
   formSubmit: function (e) {
+    console.info(e);
     var that = this;
     that.setData({
       params: {
@@ -119,7 +121,7 @@ Page({
         randomId: that.data.params.randomId,
         startDateTime: that.data.params.startDateTime,
         endDateTime: that.data.params.endDateTime,
-        formId: e.detail.value.formId
+        formId: e.detail.formId
       }
     })
     util.requestLoading('/rest/api/createSchedule', that.data.params, '正在创建',
