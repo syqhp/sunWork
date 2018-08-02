@@ -128,7 +128,7 @@ Page({
         success: function (res) {
           if (res.tapIndex == 0) {
             wx.navigateTo({
-              url: '../wxCode/wxCode'
+              url: '../wxCode/wxCode?randomId=' + that.data.params.randomIds
             })
           }
           if (res.tapIndex == 1) {

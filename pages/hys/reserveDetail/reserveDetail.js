@@ -111,7 +111,6 @@ Page({
     })
   },
   formSubmit: function (e) {
-    console.info(e);
     var that = this;
     that.setData({
       params: {

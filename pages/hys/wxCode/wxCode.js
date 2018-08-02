@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrl:'https://syq.onecc.net/HYS/static/qrCode/08140412193213.png',
+    imgUrl:'',
     emailClass:'code-btn btn2',
     emailTap:'',
     params:{
@@ -20,9 +20,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.setData({
-    //   imgUrl: 'https://syq.onecc.net/HYS/static/qrCode/'+options.randomId+'.png'
-    // });
+    this.setData({
+      imgUrl: 'https://syq.onecc.net/HYS/static/qrCode/'+options.randomId+'.png',
+      params: {
+        email: '',
+        randomId: options.randomId
+      }
+    });
   },
 
   /**
@@ -97,7 +101,7 @@ Page({
       function (res) {
         if (res.code == 200) {
           //跳转不同页面
-          
+          util.showMessage(res.message);
         } else if (res.code == 400) {
           //弹窗提醒异常
           const dataInfo = { content: res.message };
