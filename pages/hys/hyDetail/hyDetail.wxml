@@ -60,14 +60,15 @@
 
 </view>
   <view class='footer-nav'>
-    <view class='footer-nav-col' catchtap='goBack'>
-      <image src='../../../image/footer-back.png'></image>
-    </view>
-    <form bindsubmit="formSubmit" report-submit='true'>
-      <button class='footer-nav-col3' formType="submit">{{singUp?"取消报名":"报名"}}</button>      
-    </form>
-    <view class='footer-nav-col2' catchtap='getMore'>更多</view>
-    <button class='footer-nav-col' open-type="share">
-      <image src='../../../image/forwarding.png'></image>
-    </button>
+      <!-- <view class='footer-nav-col' catchtap='goBack'>
+        <image src='../../../image/footer-back.png'></image>
+      </view>
+      <form bindsubmit="formSubmit" report-submit='true'>
+        <button class='footer-nav-col3' formType="submit">{{singUp?"取消报名":"报名"}}</button>      
+      </form>
+      <view class='footer-nav-col2' catchtap='getMore'>更多</view>
+      <button class='footer-nav-col' open-type="share">
+        <image src='../../../image/forwarding.png'></image>
+      </button> -->
+    <view class='schedule-footer'>确认</view> 
   </view>

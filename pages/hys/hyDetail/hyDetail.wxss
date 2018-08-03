@@ -160,3 +160,12 @@ text-align: center;
   margin-left: 15rpx;
   margin-right: 15rpx;
 }
+.schedule-footer{
+  background: #24C2B5;
+  color: #fff;
+  border-radius: 8rpx;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  width:100%;
+}
