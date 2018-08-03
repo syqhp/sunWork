@@ -20,7 +20,8 @@
       </view>
       <!--hysConferenceList[index].conferenceName为通过接口获取的会议室信息，不是通过全局变量获取的  -->
     </view>
-    <view class='schedule-main'>
+
+    <scroll-view scroll-y="true" style="height: 100%" class='schedule-main'>
       <view class='schedule-row'>
           <view class='schedule-left'>
             <view>
@@ -31,6 +32,7 @@
             <view class='schedule-right-col {{item.type==2 || item.type==3?"active":""}}' wx:for="{{item}}" wx:key="" catchtap='{{item.type==2 || item.type==3?"goHyDetail":""}}' data-id="{{item.id}}">{{item.date==item.beginDate?item.theme+" "+item.remark:""}}</view>
           </view>
         </view>
-      </view>
+      </scroll-view>
   </view>
+
   
