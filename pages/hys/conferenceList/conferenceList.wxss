@@ -9,7 +9,6 @@ page{
 }
 .swiper-tab{
     width: 100%;
-    border-bottom: 2rpx solid #ccc;
     text-align: center;
     display: flex;
     flex-flow: row;
@@ -25,8 +24,6 @@ page{
 .swiper-tab-item{
     width: 50%; 
     color:#434343;
-    font-size: 25rpx;
-    
 }
 .swiper-tab-item:first-child{
   text-align: right;
@@ -43,7 +40,8 @@ page{
 .swiper-tab-item text{
   height: 88rpx;
     line-height: 88rpx;
-    padding-bottom: 24rpx;
+    padding-bottom: 20rpx;
+  font-size: 30rpx;
 }
 .active{
     color:#00C4B6;
@@ -58,7 +56,7 @@ swiper{
 }
 
 .hy-list-wrap{
-  padding: 0 10rpx;
+  padding: 0 20rpx;
 }
 .hy-list{
   display: flex;
@@ -100,7 +98,7 @@ margin-top: 10rpx;
 }
 .add-hy{
   background: #fff;
-  margin:20rpx 10rpx;
+  margin:20rpx;
   border: 2rpx solid #dcdcdc;
   border-radius: 10rpx;
   height: 140rpx;

@@ -1,9 +1,18 @@
 .content{
-  width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 20rpx;
+  right: 20rpx;
   overflow: hidden;
-  padding: 0 20rpx;
-  box-sizing: border-box;
+  box-sizing:content-box;
+}
+.content swiper{
+  position: fixed;
+  top: 0;
+  left: 20rpx;
+  right: 20rpx;
+  overflow: hidden;
+  box-sizing: content-box;
 }
 .schedule-top{
   border-top:0.5rpx solid #24C2B5;
@@ -48,11 +57,11 @@
 .schedule-bottom{
   margin-bottom: 20rpx;
   border:0.5rpx solid #24C2B5;
-  position:absolute;
+  position:fixed;
   left: 20rpx;
   right: 18rpx;
   top: 163rpx;
-  bottom: 110rpx;
+  bottom: 100rpx;
   overflow: scroll;
 }
 .schedule-title{
@@ -87,7 +96,7 @@
 
 .schedule-main{
   padding-top: 92rpx;
-
+-webkit-overflow-scrolling:touch;
 }
 
 .schedule-row{
@@ -135,7 +144,7 @@
    background: #e3e3e3
 }
 .schedule-right-col.active3{
-   background: #DCDCDC
+   background: #666
 }
 
 .schedule-right-r.active{
@@ -144,7 +153,6 @@
 }
 .line{border: 0.25rpx dotted #24C2B5;}
 .schedule-footer{
-  margin:20rpx;
   background: #24C2B5;
   color: #fff;
   opacity: 0.5;

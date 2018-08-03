@@ -33,3 +33,6 @@ font-size:14px;
 .schedule-footer.red{
   background: #E44447 !important;
 }
+.schedule-footer.btn2{
+  margin-top: 40rpx !important;
+}

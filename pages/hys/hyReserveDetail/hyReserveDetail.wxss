@@ -30,6 +30,7 @@ display: block;
 .hy-title{
   font-size: 28rpx;
   color: #999;
+  margin-left: 30rpx;
 }
 .hy-row-wrap{
   margin-bottom: 128rpx;
@@ -82,6 +83,7 @@ flex: 1;
 border: 1rpx solid #24C2B5;
 text-align: center;
   border-radius: 8rpx;
+  height:74rpx;
 }
 .footer-nav-col:first-child image{
   width: 34rpx;
@@ -163,6 +165,5 @@ text-align: center;
 }
 swiper {
 display:block;
-height:90px !important;
+height:160rpx !important;
 }
-

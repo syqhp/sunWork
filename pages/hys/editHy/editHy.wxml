@@ -15,7 +15,8 @@
             </view>
           <view class="weui-cell__bd "><input class='detail-h' name='remark' value='{{params.remark}}' placeholder='填写位置等信息'></input></view>
           </view>
-           <view class="weui-cells weui-cells_after-title">
+        </view>
+        <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_switch">
               <view class="weui-label">验证</view>
               <view class="weui-cell__ft">
@@ -23,12 +24,11 @@
               </view>
             </view>
           </view>
-        </view>
       </view>
       <view class='detail-font'>如果开启，我们会帮助你验证预定此会议室用户的手机号</view>
       <button class='schedule-footer active' formType="submit">下一步</button>  
     </form>
-    <button class='schedule-footer active red' catchtap='deleteConference'>删除会议室</button>  
+    <button class='schedule-footer active red btn2' catchtap='deleteConference'>删除会议室</button>  
 </view>
 
 
