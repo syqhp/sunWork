@@ -13,18 +13,25 @@ Page({
       type:'signUp'
     },
     hydate:[],
-    singUp:false
+    singUp:false,
+    confirm:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+   
     var that = this;
+    var confirm = that.data.confirm;
+    if (options.confirm != undefined) {
+      confirm = options.confirm
+    }
     that.setData({
       params: {
         id: options.id
-      }
+      },
+      confirm: confirm
     })
   },  
 
@@ -78,6 +85,40 @@ Page({
       title: that.data.hydate.conferenceName + ' - ' + that.data.hydate.theme
     }
   },
+  upFormId:function(e){
+    console.info(e);
+    var that = this;
+    that.setData({
+      params: {
+        id: that.data.params.id,
+        formId: e.detail.formId,
+        type: 'signUp'
+      }
+    })
+    util.requestLoading('/rest/api/signUp', that.data.params, '正在更新',
+      function (res) {
+        if (res.code == 200) {
+          that.loadDate();
+        } else if (res.code == 400) {
+          //弹窗提醒异常
+          const dataInfo = { content: res.message };
+          util.showMessage(dataInfo);
+
+        } else if (res.code == 410) {
+          //跳页面提醒异常
+          wx.redirectTo({
+            url: '../../common/error/error?message=' + res.message
+          })
+        } else if (res.code == 420) {
+          //登陆超时
+          util.login({ url: '../index' });
+        }
+      }, function () {
+        wx.showToast({
+          title: '更新失败',
+        })
+      })
+  },
   formSubmit:function(e){
     var that = this;
     var type = 'signUp';
@@ -116,7 +157,10 @@ Page({
       })
   },
   goBack:function(){
-    wx.navigateBack({ changed: true })
+    // wx.navigateBack({ changed: true })
+    wx.switchTab({
+      url: '../schedule/schedule'
+    })
   },
   goHysDetail:function (e){
     wx.navigateTo({

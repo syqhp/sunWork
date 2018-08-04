@@ -3,7 +3,7 @@
   <view class='enter-row2'>欢迎使用 会e室</view>
   <view class='enter-row3'>请为你的会议室：</view>
   <view class='add-hy' bindtap='create'>
-    <image src='../../../image/add.png'></image>
+    <image src='../../image/add.png'></image>
     <text class='add-font' >创建 专属二维码门牌</text>
   </view>
 

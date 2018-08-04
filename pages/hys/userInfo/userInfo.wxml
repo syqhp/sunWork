@@ -1,5 +1,5 @@
 <view>
-  <view class="personal-header" data-name='{{userInfo.userName}}' data-email='{{userInfo.email}}' catchtap='goEditGr'>
+  <view class="personal-header" >
     <view class="personal-header-left">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,7 +7,7 @@
     </block>
       
     </view>
-    <view class="personal-header-right">
+    <view class="personal-header-right"  data-name='{{userInfo.userName}}' data-email='{{userInfo.email}}' catchtap='goEditGr'>
       <text>姓名：<text>{{userInfo.userName}}</text></text>
       <text>邮箱：<text>{{userInfo.email}}</text></text> 
     </view>

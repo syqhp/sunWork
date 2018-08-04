@@ -16,7 +16,7 @@
         <view wx:if="{{followList.length > 0}}" class='hy-list-wrap'>
           <view class='hy-list' wx:for="{{followList}}" wx:key="" data-value="{{item.randomId}}" bindtap='goDetail'>
               <view class='hy-list-left'>
-                <image src='../../../image/icon.jpg'></image>
+                <image src='../../image/icon.jpg'></image>
               </view>
               <view class='hy-list-right'>
                 <view class='hy-list-rightT'>{{item.name}}</view>
@@ -32,7 +32,7 @@
         <view wx:if="{{createList.length > 0}}" class='hy-list-wrap'>
           <view class='hy-list' wx:for="{{createList}}" wx:key="" data-value="{{item.randomId}}"  bindtap='goDetail'>
               <view class='hy-list-left'>
-                <image src='../../../image/icon.jpg'></image>
+                <image src='../../image/icon.jpg'></image>
               </view>
               <view class='hy-list-right'>
                 <view class='hy-list-rightT'>{{item.name}}</view>
@@ -41,7 +41,7 @@
           </view>
         </view>
         <view class='add-hy' bindtap='create'>
-            <image src='../../../image/add.png'></image>
+            <image src='../../image/add.png'></image>
             <text class='add-font' >创建 专属二维码门牌</text>
           </view>
       </swiper-item>
@@ -51,6 +51,6 @@
 <view class='enter-row2' wx:if="{{conferenceFs}}">欢迎使用 会e室</view>
 <view class='enter-row3' wx:if="{{conferenceFs}}">请为你的会议室：</view>
 <view class='add-hy' bindtap='create' wx:if="{{conferenceFs}}">
-  <image src='../../../image/add.png'></image>
+  <image src='../../image/add.png'></image>
   <text class='add-font' >创建 专属二维码门牌</text>
 </view>

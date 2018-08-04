@@ -2,7 +2,7 @@
   <view class='code-title'>会议室二维码已生成</view>
   <view class='code-img'>
     <image src='{{imgUrl}}'></image>
-    <image src='../../../image/big.png' catchtap='show'></image>
+    <image src='../../image/big.png' catchtap='show'></image>
   </view>
   <view class='code-font'>你可以直接保存到相册中，以便分享、邀请使用</view>
   <view class='code-btn active' catchtap='saveImage'>保存到相册</view>

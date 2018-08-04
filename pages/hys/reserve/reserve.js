@@ -123,6 +123,7 @@ Page({
     that.findScheduleByConference();
   },
   goSelect: function (e) {
+    console.info(1);
     wx.navigateTo({
       url: '../../hys/select/select'
     })

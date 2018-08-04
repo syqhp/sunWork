@@ -1,4 +1,4 @@
 <view class="container">
   <image bindtap="bindViewTap" class="main-avatar" src="{{welcomeIndexImage}}" mode="cover"></image>
-  <text class="main-nickname">会e室1</text>
+  <text class="main-nickname">会e室</text>
 </view>

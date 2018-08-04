@@ -98,7 +98,6 @@ Page({
     util.requestLoading('/rest/api/findScheduleGetUser', this.data.params, '正在加载',
       function (res) {
         if (res.code == 200) {
-          console.info(res);
           var hyDate = res.data;
           var dataList = res.dateList;
           var dataListAll = [dataList.slice(0, 7), dataList.slice(7, 14), dataList.slice(14, 21), dataList.slice(21, 28)];
@@ -111,7 +110,6 @@ Page({
             hysConferenceList: res.hysConferenceList,
             hyDate: res.data
           })
-          console.log(that.data.dataTime)
 
 
 

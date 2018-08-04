@@ -16,7 +16,7 @@
     <view class='schedule-title' bindtap='dateUrl'>
       <view class='schedule-title-l'></view>
       <view class='schedule-title-r' wx:for="{{hysConferenceList}}" wx:key="" catchtap='goDetail' data-id="{{item.randomId}}">
-        <image src="../../../image/icon.jpg"></image>
+        <image src="../../image/icon.jpg"></image>
       </view>
       <!--hysConferenceList[index].conferenceName为通过接口获取的会议室信息，不是通过全局变量获取的  -->
     </view>

@@ -2,21 +2,31 @@ const app = getApp()
 var util = require('../../utils/util.js')
 Page({
   data:{
-    welcomeIndexImage:"http://chuantu.biz/t6/337/1530516050x-1404817748.jpg",
+    welcomeIndexImage:"../image/logo.jpg",
     params:{
       code:'',
       headUrl:'',
       nickName:''
+    },
+    goUrl: ''
+  },
+  onLoad: function (options){
+    var that = this;
+    if (options.goUrl != undefined){
+      that.setData({
+        goUrl: options.goUrl
+      })
     }
   },
   onReady:function(){
+    var that = this;
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (res.code) {
           this.data.params.code = res.code;
-          util.requestLoading('/rest/api/login',this.data.params,'正在登录',
+          util.requestLoading('/rest/api/login', that.data.params,'正在登录',
           function(res){
             if (!util.isBlank(res.sessionId)) {
               wx.setStorageSync('header', res.sessionId)
@@ -30,9 +40,15 @@ Page({
                 return 
               } else if (res.status == 1) {
                 //调整成功页面
-                wx.switchTab({
-                  url: 'conferenceList/conferenceList'
-                })
+                if (that.data.goUrl != ''){
+                  wx.redirectTo({
+                    url: that.data.goUrl
+                  })
+                }else{
+                  wx.switchTab({
+                    url: 'conferenceList/conferenceList'
+                  })
+                }
                 return ;
               } else {
                 //跳转异常页面

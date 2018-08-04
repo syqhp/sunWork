@@ -25,7 +25,7 @@
     <view class='date-row-wrap' wx:for="{{dataList}}" wx:key="">
       <view class='date-row-top'>
           <view class='date-row-topl'>
-              <image src='../../../image/icon.jpg'></image>
+              <image src='../../image/icon.jpg'></image>
               <text>{{item.conferenceName}}</text>
           </view>
           <text class='date-row-topr'>累计时间：{{item.timeDifference}}           </text>
@@ -38,7 +38,7 @@
           </view>
           <view class='date-row-bomr'>
             <view class='date-row-bomrt'>
-              <image src='../../../image/icon.jpg'></image>
+              <image src='../../image/icon.jpg'></image>
               <text>{{item.createHysUserName}}</text>
             </view>
             <view class='date-row-bomrb'>{{item.createHysUserMobile}}</view>

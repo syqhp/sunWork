@@ -165,7 +165,10 @@ text-align: center;
   color: #fff;
   border-radius: 8rpx;
   text-align: center;
-  height: 88rpx;
-  line-height: 88rpx;
+  height: 74rpx;
+  line-height: 74rpx;
   width:100%;
+}
+.upForm{
+  width:80%;
 }

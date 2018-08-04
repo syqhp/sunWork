@@ -100,8 +100,10 @@ Page({
     util.requestLoading('/rest/api/sendEmail', this.data.params, '正在发送',
       function (res) {
         if (res.code == 200) {
+          console.info(res);
           //跳转不同页面
-          util.showMessage(res.message);
+          const dataInfo = { content: res.message };
+          util.showMessage(dataInfo);
         } else if (res.code == 400) {
           //弹窗提醒异常
           const dataInfo = { content: res.message };
